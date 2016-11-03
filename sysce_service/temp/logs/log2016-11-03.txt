@@ -2,3 +2,8 @@
 [2016-11-03 15:30:54] [INFO] [ioteca_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-03 15:38:05] [INFO] [ioteca_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-03 17:15:47] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:33:09] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:33:36] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:34:11] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:42:57] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:47:17] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated

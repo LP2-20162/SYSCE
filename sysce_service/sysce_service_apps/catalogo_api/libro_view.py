@@ -5,6 +5,8 @@ from sysce_service_apps.catalogo.models.libro import Libro
 class LibroSerializer(serializers.ModelSerializer):
 
     class Meta:
+
+        fields = '__all__'
         model = Libro
 
 

@@ -22,6 +22,8 @@ log = logging.getLogger(__name__)
 class MenuParentSerializer(serializers.ModelSerializer):
 
     class Meta:
+
+        fields = '__all__'
         model = Menu
 
 
@@ -32,6 +34,8 @@ class MenuSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Menu
+
+        fields = '__all__'
         # fields = ('id', 'title', 'parent', 'childrens')
 
 

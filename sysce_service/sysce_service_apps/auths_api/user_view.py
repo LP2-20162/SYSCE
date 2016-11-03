@@ -25,6 +25,8 @@ log = logging.getLogger(__name__)
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
+
+        fields = '__all__'
         model = User
 
 

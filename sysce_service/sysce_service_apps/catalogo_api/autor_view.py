@@ -43,6 +43,8 @@ class AutorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Autor
+
+        fields = '__all__'
         # fields = ('url', 'username', 'email', 'is_staff')
 
 

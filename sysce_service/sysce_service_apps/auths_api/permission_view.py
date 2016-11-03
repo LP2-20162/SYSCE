@@ -18,6 +18,8 @@ from sysce_service_apps.utils.permissions import ModelPermission
 class ContentTypeSerializer(serializers.ModelSerializer):
 
     class Meta:
+
+        fields = '__all__'
         model = ContentType
 
 
