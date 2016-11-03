@@ -3,7 +3,7 @@ from django.db.models import Q
 from operator import __or__ as OR
 from functools import reduce
 
-from ioteca_service_apps.catalogo.models.categoria import Categoria
+from sysce_service_apps.catalogo.models.categoria import Categoria
 
 
 class CategoriaSerializer(serializers.ModelSerializer):

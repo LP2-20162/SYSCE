@@ -1,5 +1,5 @@
 from rest_framework import serializers, viewsets
-from ioteca_service_apps.catalogo.models.libro import Libro
+from sysce_service_apps.catalogo.models.libro import Libro
 
 
 class LibroSerializer(serializers.ModelSerializer):

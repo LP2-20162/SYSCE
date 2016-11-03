@@ -62,7 +62,7 @@ app
         $mdDialog.show({
             scope: $scope,
             targetEvent: evt,
-            templateUrl: 'ioteca_web_apps/auths_web/views/permission/form.html',
+            templateUrl: 'sysce_web_apps/auths_web/views/permission/form.html',
             parent: angular.element(document.body),
             clickOutsideToClose: false,
             preserveScope: true,
@@ -78,7 +78,7 @@ app
         $scope.permission = authsService.Permission.get({ id: d.id });
         $mdDialog.show({
             scope: $scope,
-            templateUrl: 'ioteca_web_apps/auths_web/views/permission/form.html',
+            templateUrl: 'sysce_web_apps/auths_web/views/permission/form.html',
             parent: angular.element(document.body),
             clickOutsideToClose: false,
             preserveScope: true,

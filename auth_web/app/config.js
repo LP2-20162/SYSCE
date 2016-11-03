@@ -1,10 +1,10 @@
 ﻿var baseUrl = 'http://localhost:9000/';
 var loginUrl = 'http://localhost:9001/auth_web/';
-var iotecaUrl = 'http://localhost:9001/ioteca_web/';
+var iotecaUrl = 'http://localhost:9001/sysce_web/';
 
 
-var clientId = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61';
-var clientSecret = 'dYdgBysUnR4hr3JpREHPyVsUnVw42uGgyIoc3ThsYI1pQOhKuGNhIuYe2Oc0ClPSNMhR3WFEO33uaISItfigJLPkAh22JpBkBABOQbaQuhhnTDBKVmNnEfTm6q2km3u4';
+var clientId = 'UCYQJ1obfZsDbIKs7A1Ch3SQmBPS1IW83ohVY6d1';
+var clientSecret = '1LDrAATqyOhmvkHcxRVnUXIKUnFmDj3nYww5ZCaf1kM8gu7WLa6jLuC2QRdbJejDLdZzu7WPFyAQ31fJ64BzA2cGR8B1LCJk9hd3KHczGsHr06Vk4Stb3dpqOlu3WSYV';
 var grantType = 'password';
 
 var config = {

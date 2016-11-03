@@ -12,12 +12,12 @@ from rest_framework import permissions
 # from rest_framework import decorators
 from rest_framework.views import APIView
 from rest_framework import status
-# from ioteca_service_apps.utils.serializers import RecursiveSerializer
-# from ioteca_service_apps.utils.pagination import LocalPagination
-from ioteca_service_apps.utils.security import log_params
-from ioteca_service_apps.utils.permissions import ModelPermission
+# from sysce_service_apps.utils.serializers import RecursiveSerializer
+# from sysce_service_apps.utils.pagination import LocalPagination
+from sysce_service_apps.utils.security import log_params
+from sysce_service_apps.utils.permissions import ModelPermission
 
-from ioteca_service_apps.auths.models.user import User
+from sysce_service_apps.auths.models.user import User
 # Get an instance of a logger
 log = logging.getLogger(__name__)
 

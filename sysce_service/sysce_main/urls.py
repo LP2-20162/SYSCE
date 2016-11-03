@@ -1,4 +1,4 @@
-"""ioteca_main URL Configuration
+"""sysce_main URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 
-    url(r'^api/auths/', include('ioteca_service_apps.auths_api.urls')),
-    url(r'^api/catalogo/', include('ioteca_service_apps.catalogo_api.urls')),
+    url(r'^api/auths/', include('sysce_service_apps.auths_api.urls')),
+    url(r'^api/catalogo/', include('sysce_service_apps.catalogo_api.urls')),
 ]

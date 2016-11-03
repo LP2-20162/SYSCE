@@ -10,9 +10,9 @@ from django.contrib.contenttypes.models import ContentType
 
 from rest_framework import serializers, viewsets
 
-from ioteca_service_apps.utils.pagination import ModelPagination
-from ioteca_service_apps.utils.security import log_params
-from ioteca_service_apps.utils.permissions import ModelPermission
+from sysce_service_apps.utils.pagination import ModelPagination
+from sysce_service_apps.utils.security import log_params
+from sysce_service_apps.utils.permissions import ModelPermission
 
 
 class ContentTypeSerializer(serializers.ModelSerializer):

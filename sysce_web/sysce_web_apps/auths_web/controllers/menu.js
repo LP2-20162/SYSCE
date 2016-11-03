@@ -79,7 +79,7 @@ app
         $mdDialog.show({
             scope: $scope,
             targetEvent: evt,
-            templateUrl: 'ioteca_web_apps/auths_web/views/menu/formd.html',
+            templateUrl: 'sysce_web_apps/auths_web/views/menu/formd.html',
             parent: angular.element(document.body),
             clickOutsideToClose: false,
             preserveScope: true,
@@ -98,7 +98,7 @@ app
         $scope.menu = authsService.Menu.get({ id: d.id });
         $mdDialog.show({
             scope: $scope,
-            templateUrl: 'ioteca_web_apps/auths_web/views/menu/formd.html',
+            templateUrl: 'sysce_web_apps/auths_web/views/menu/formd.html',
             parent: angular.element(document.body),
             clickOutsideToClose: false,
             preserveScope: true,

@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework import status
-from ioteca_service_apps.utils.security import log_params
-from ioteca_service_apps.auths.models.menu import Menu
+from sysce_service_apps.utils.security import log_params
+from sysce_service_apps.auths.models.menu import Menu
 
 # Get an instance of a logger
 log = logging.getLogger(__name__)

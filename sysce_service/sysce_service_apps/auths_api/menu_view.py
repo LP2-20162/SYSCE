@@ -9,12 +9,12 @@ from rest_framework import permissions
 from django.utils.decorators import method_decorator
 # from django.contrib.auth.decorators import permission_required
 
-from ioteca_service_apps.utils.serializers import RecursiveSerializer
-from ioteca_service_apps.utils.pagination import ModelPagination
-from ioteca_service_apps.utils.security import log_params
-from ioteca_service_apps.utils.permissions import ModelPermission
+from sysce_service_apps.utils.serializers import RecursiveSerializer
+from sysce_service_apps.utils.pagination import ModelPagination
+from sysce_service_apps.utils.security import log_params
+from sysce_service_apps.utils.permissions import ModelPermission
 
-from ioteca_service_apps.auths.models.menu import Menu
+from sysce_service_apps.auths.models.menu import Menu
 import logging
 log = logging.getLogger(__name__)
 

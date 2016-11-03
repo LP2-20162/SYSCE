@@ -58,24 +58,24 @@ app
      .state("auths.hierarchy.hierarchy_type", {
         url: "/hierarchy_type",
         data: { section: 'Hierarchys', page: 'Hierarchy Type' },
-        templateUrl: "ioteca_web_apps/auths_web/views/hierarchy_type/index.html"
+        templateUrl: "sysce_web_apps/auths_web/views/hierarchy_type/index.html"
     })
 
     .state("auths.system.permission", {
         url: "/permission",
         data: { section: 'System', page: 'Permisos' },
-        templateUrl: "ioteca_web_apps/auths_web/views/permission/index.html"
+        templateUrl: "sysce_web_apps/auths_web/views/permission/index.html"
     })
     .state("auths.system.contenttype", {
         url: "/contenttype",
         data: { section: 'System', page: 'Aplicaciones' },
-        templateUrl: "ioteca_web_apps/auths_web/views/contenttype/index.html"
+        templateUrl: "sysce_web_apps/auths_web/views/contenttype/index.html"
     })
 
     .state("auths.system.log", {
         url: "/log",
         data: { section: 'System', page: 'Logs' },
-        templateUrl: "ioteca_web_apps/auths_web/views/log/index.html"
+        templateUrl: "sysce_web_apps/auths_web/views/log/index.html"
     })
 
     //==================================
@@ -85,7 +85,7 @@ app
     .state("auths.system.menu", {
         url: "/menu",
         data: { section: 'System', page: 'Menú' },
-        templateUrl: "ioteca_web_apps/auths_web/views/menu/index.html",
+        templateUrl: "sysce_web_apps/auths_web/views/menu/index.html",
 
         settings: {
             //loginRequired: true,
