@@ -1,19 +1,19 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <md-card ng-controller="PersonaCtrl">
+            <md-card ng-controller="AlumnoCtrl">
                 <md-card-header>
                     <md-card-avatar>
                         <img class="md-user-avatar" src="media/img/list/60.jpeg" />
                     </md-card-avatar>
                     <md-card-header-text>
-                        <span class="md-headline">Personas</span>
-                        <span class="md-subhead">Insertar Personas</span>
+                        <span class="md-headline">Alumnos</span>
+                        <span class="md-subhead">Insertar Alumnos</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
-                            <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.personasNew">
+                            <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.alumnosNew">
                                 <md-tooltip md-autohide>Add</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
@@ -38,26 +38,22 @@
                         
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th class="col-hidden" data-order="codigo">direccion</th>
-                                <th>fecha_nac</th>
-                                <th colspan="2" class="align-options">acciones</th>
+                                <th>Id</th>
+                                <th class="col-hidden" data-order="persona">nombre</th>
+                                <th colspan="2" class="align-options" data-order="cargoEscolar">cargoEscolar</th>
+                                <th class="col-hidden" data-order="estado">estado</th>                        
+                     
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
-                                <td> {{ d.nombre }} </td>
-                                <td> {{ d.apellido_paterno }} </td>
-                                <td> {{ d.apellido_materno }} </td>
-                                <td> {{ d.dni }} </td>
-                                <td> {{ d.telefono }} </td>
-                                <td> {{ d.sexo }} </td>
-                                <td> {{ d.direccion }} </td>
-                                <td> {{ d.fecha_nac }} </td>
+                                <td> {{ d.persona }} </td>                                
+                                <td> {{ d.cargoEscolar }} </td>
+                                <td> {{ d.estado }} </td>
+                             
                                 <td>
-                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.personasEdit({id:d.id})">
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.alumnosEdit({id:d.id})">
                                         <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>

@@ -4,8 +4,8 @@
             <md-card ng-controller="NomCtrl">
                 <md-card-title>
                     <md-card-title-text>
-                        <span class="md-headline">Trabajar con x</span>
-                        <span class="md-subhead">CRUD x</span>
+                        <span class="md-headline">Trabajar con Test</span>
+                        <span class="md-subhead">CRUD Test</span>
                     </md-card-title-text>
                 </md-card-title>
                 <md-card-content layout="row" layout-align="space-between">
@@ -13,7 +13,7 @@
                         <form name="userForm">
                             <div layout-gt-sm="row">
                                 <md-input-container class="md-block" flex-gt-sm>
-                                    <label>Name</label>
+                                    <label>Nombre   </label>
                                     <input ng-model="nombre">
                                 </md-input-container>
                             </div>
@@ -54,9 +54,9 @@
                     <thead md-head>
                         <tr md-row>
                             <th md-column>#</th>
-                            <th md-column md:order:by="name">nombre</th>
+                            <th md-column md:order:by="name">Nombre</th>
                             <th md-column>codigo</th>
-                            <th md-column colspan='2' align='center'>acciones</th>
+                            <th md-column colspan='2' align='center'>Acciones</th>
                         </tr>
                     </thead>
                     <tbody md-body>
@@ -64,8 +64,8 @@
                             <td md-cell> {{ d.num }}</td>
                             <td md-cell> {{ d.nombre }}</td>
                             <td md-cell> {{ d.codigo }}</td>
-                            <td md-cell> <a href="" ng-click="sel(d)">Edit</a> </td>
-                            <td md-cell> <a href="" ng-click="delete(d)">Delete</a> </td>
+                            <td md-cell> <a href="" ng-click="sel(d)">Editar</a> </td>
+                            <td md-cell> <a href="" ng-click="delete(d)">Eliminar</a> </td>
                         </tr>
                     </tbody>
                 </table>

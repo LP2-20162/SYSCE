@@ -14,7 +14,7 @@
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
                             <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.personasNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <md-tooltip md-autohide>Insertar</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                             <md-card-icon-actions>
@@ -38,11 +38,16 @@
                         
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th class="col-hidden" data-order="codigo">direccion</th>
-                                <th>fecha_nac</th>
-                                <th colspan="2" class="align-options">acciones</th>
+                                <th>id</th>
+                                <th class="col-hidden" data-order="nombre">Nombre</th>
+                                <th class="col-hidden" data-order="apellido_paterno">Apellido Paterno</th>
+                                <th class="col-hidden" data-order="apellido_materno">Apellido Materno</th>
+                                <th class="col-hidden" data-order="dni">Dni</th>                               
+                                <th class="col-hidden" data-order="telefono">Telefono</th>
+                                <th class="col-hidden" data-order="Sexo">Sexo</th>
+                                 <th class="col-hidden" data-order="direccion">Direccion</th>
+                               
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -55,18 +60,22 @@
                                 <td> {{ d.telefono }} </td>
                                 <td> {{ d.sexo }} </td>
                                 <td> {{ d.direccion }} </td>
-                                <td> {{ d.fecha_nac }} </td>
+                               
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.personasEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Editar {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
+                                      <md-button class="md-fab md-mini md-primary" aria-label="Use Facebook">
+                <ng-md-icon icon="facebook" aria-label="title" style="color: greenwhile;"></ng-md-icon>
+            </md-button>
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Eliminar {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
+
                                 </td>
                             </tr>
                         </tbody>
