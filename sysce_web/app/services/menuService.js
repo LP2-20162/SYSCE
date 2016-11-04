@@ -19,7 +19,7 @@ app
     ];
 
     sections.push({
-        title: 'Dashboard',
+        title: 'Inicio',
         state: 'app.dashboard',
         type: 'link'
     });
@@ -32,7 +32,7 @@ app
             type: 'toggle',
             state: 'ui',
             menu_items: [{
-                title: 'Test 1 uno más',
+                title: 'Timayus',
                 state: 'ui.test1',
                 type: 'link'
             }, {

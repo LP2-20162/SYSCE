@@ -7,3 +7,21 @@
 [2016-11-03 17:34:11] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
 [2016-11-03 17:42:57] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
 [2016-11-03 17:47:17] [INFO] [sysce_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:52:04] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:52:12] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 17:53:34] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:07:09] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:19:10] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:22:52] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:23:31] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:23:55] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:28:20] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:31:23] [INFO] [sysce_service_apps.auths_api.menu_view:57] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [pantigoso] [GET] !!Writing in log file!!
+[2016-11-03 18:31:23] [INFO] [sysce_service_apps.auths_api.menu_view:57] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [pantigoso] [GET] !!Writing in log file!!
+[2016-11-03 18:31:57] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:32:35] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:32:43] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:34:36] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:34:48] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 18:34:52] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-03 19:21:01] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
