@@ -1,17 +1,17 @@
 app
 // =========================================================================
-// Show View and Delete Persona 
+// Show View and Delete Alumno 
 // =========================================================================
-    .controller("PersonaCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
+    .controller("AlumnoCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.fields = 'nombre';
     var params = {};
     $scope.lista = [];
-    $scope.persona = {};
+    $scope.alumno = {};
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        registroService.Persona.query(params, function(r) {
+        registroService.Alumno.query(params, function(r) {
             $scope.lista = r.results;
             $scope.options = r.options;
             $scope.isLoading = false;
@@ -35,9 +35,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
-            registroService.Persona.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó Persona:" + JSON.stringify(d));
-                toastr.success('Se eliminó Persona ' + d.nombre, 'Persona');
+            registroService.Alumno.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó Alumno:" + JSON.stringify(d));
+                toastr.success('Se eliminó Alumno ' + d.nombre, 'Alumno');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -49,15 +49,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Persona
+// Create and Update Alumno
 // =========================================================================
-.controller("PersonaSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
+.controller("AlumnoSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.persona = {};
+    $scope.alumno = {};
 
     $scope.sel = function() {
-        registroService.Persona.get({ id: $stateParams.id }, function(r) {
-            $scope.persona = r;
+        registroService.Alumno.get({ id: $stateParams.id }, function(r) {
+            $scope.alumno = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,20 +68,20 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.persona.id) {
-            registroService.Persona.update({ id: $scope.persona.id }, $scope.persona, function(r) {
+        if ($scope.alumno.id) {
+            registroService.Alumno.update({ id: $scope.alumno.id }, $scope.alumno, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó Persona ' + r.nombre, 'Persona');
-                $state.go('registro.registro.personas');
+                toastr.success('Se editó Alumno ' + r.nombre, 'Alumno');
+                $state.go('registro.registro.alumnos');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            registroService.Persona.save($scope.persona, function(r) {
+            registroService.Alumno.save($scope.alumno, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó Persona ' + r.nombre, 'Persona');
-                $state.go('registro.registro.personas');
+                toastr.success('Se insertó Alumno ' + r.nombre, 'Alumno');
+                $state.go('registro.registro.alumnos');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -90,7 +90,7 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('registro.registro.personas');
+        $state.go('registro.registro.alumnos');
 
 
         

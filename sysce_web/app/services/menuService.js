@@ -101,6 +101,10 @@ app
                 state: 'registro.registro.persona',
                 type: 'link'
             },{
+                title: 'Alumno',
+                state: 'registro.registro.alumno',
+                type: 'link'
+            },{
                 title: 'Cursos',
                 state: 'registro.registro.curso',
                 type: 'link'

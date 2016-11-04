@@ -152,7 +152,33 @@ app.constant('ROUTERS', [{
         "templateUrl": "sysce_web_apps/registro_web/views/personas/form.html"
     }
 
-},  {
+}, {
+    "registro.registro.alumno":  {
+        "url": "/alumno",
+        "data": {
+            "section": "Registro",
+            "page": "Alumnos"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/alumnos/index.html"
+    },
+    "registro.registro.alumnosNew": {
+        "url": "/alumnos/new",
+        "data": {
+            "section": "Registro",
+            "page": "Alumnos"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/alumnos/form.html"
+    },
+    "registro.registro.alumnosEdit": {
+        "url": "/alumnos/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "Alumnos"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/alumnos/form.html"
+    }
+
+}, {
     "registro.registro.curso": {
         "url": "/curso",
         "data": {

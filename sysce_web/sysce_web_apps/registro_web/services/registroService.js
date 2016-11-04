@@ -9,6 +9,11 @@ app
 
 
         }),
+        Alumno: $resource(url + "alumnos/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+
+
+        }),
         Colegio: $resource(url + "colegios/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             

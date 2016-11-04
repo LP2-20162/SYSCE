@@ -9295,3 +9295,848 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_erro
 [2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
 [2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" WHERE "registro_persona"."id" = '87115113555d40458f9ad23577890544'; args=('87115113555d40458f9ad23577890544',)
 [2016-11-04 11:53:13] INFO [django.server:131] "GET /admin/registro/persona/87115113-555d-4045-8f9a-d23577890544/change/ HTTP/1.1" 200 9308
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\registro_api\\\\urls.py'> (None:None) ^api/registro/>"
+[2016-11-04 12:06:55] WARNING [django.request:152] Not Found: /
+[2016-11-04 12:06:55] WARNING [django.server:131] "GET / HTTP/1.1" 404 2456
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-04 12:06:55] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\registro_api\\\\urls.py'> (None:None) ^api/registro/>"
+[2016-11-04 12:06:55] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-04 12:06:55] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2489
+[2016-11-04 12:22:12] DEBUG [django.db.backends:90] (0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-04 12:22:12] DEBUG [django.db.backends:90] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-04 12:36:30] DEBUG [django.db.backends:90] (0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-04 12:36:30] DEBUG [django.db.backends:90] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-04 12:36:40] DEBUG [django.db.backends:90] (0.014) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt' AND "django_session"."expire_date" > '2016-11-04 17:36:40.676928'); args=('dvxmwuyo8tva24dr4i9dse1a4fqs2azt', '2016-11-04 17:36:40.676928')
+[2016-11-04 12:36:40] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'True': True, 'None': None}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04EF1BB0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x040B96A8>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D5D2F0>, 'user': <SimpleLazyObject: <User: sysce>>, 'request': <WSGIRequest: GET '/admin/'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387650>, 'models': [{'object_name': 'Group', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0410C7B0>, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Permission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B830>, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auth/', 'app_label': 'auth'}, {'name': 'Auths', 'models': [{'object_name': 'HierarchyType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B810>, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Hierarchy', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B430>, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Menu', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54C10>, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Person', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B0D0>, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyGroup', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B0F0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyPermission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B110>, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'User', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B790>, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auths/', 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387770>, 'models': [{'object_name': 'ContentType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x040AFEB0>, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'models': [{'object_name': 'AccessToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B890>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Application', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E93A50>, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Grant', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B330>, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'RefreshToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B6F0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'app_label': 'oauth2_provider'}, {'name': 'Registro', 'models': [{'object_name': 'ActividadColegio', 'name': 'ActividadesColegio', 'admin_url': '/admin/registro/actividadcolegio/', 'add_url': '/admin/registro/actividadcolegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'ActividadEscolar', 'name': 'ActividadesEscolares', 'admin_url': '/admin/registro/actividadescolar/', 'add_url': '/admin/registro/actividadescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Alumno', 'name': 'Alumnos', 'admin_url': '/admin/registro/alumno/', 'add_url': '/admin/registro/alumno/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Apoderado', 'name': 'Apoderados', 'admin_url': '/admin/registro/apoderado/', 'add_url': '/admin/registro/apoderado/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Asistencia', 'name': 'Asistencias', 'admin_url': '/admin/registro/asistencia/', 'add_url': '/admin/registro/asistencia/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargaAcademica', 'name': 'CargasAcademicas', 'admin_url': '/admin/registro/cargaacademica/', 'add_url': '/admin/registro/cargaacademica/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargoEscolar', 'name': 'CargosEscolares', 'admin_url': '/admin/registro/cargoescolar/', 'add_url': '/admin/registro/cargoescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Colegio', 'name': 'Colegios', 'admin_url': '/admin/registro/colegio/', 'add_url': '/admin/registro/colegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Curso', 'name': 'Cursos', 'admin_url': '/admin/registro/curso/', 'add_url': '/admin/registro/curso/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Docente', 'name': 'Docentes', 'admin_url': '/admin/registro/docente/', 'add_url': '/admin/registro/docente/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Persona', 'name': 'Personas', 'admin_url': '/admin/registro/persona/', 'add_url': '/admin/registro/persona/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Salon', 'name': 'Salones', 'admin_url': '/admin/registro/salon/', 'add_url': '/admin/registro/salon/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/registro/', 'app_label': 'registro'}], 'LANGUAGE_CODE': 'en-us', 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387650>, 'models': [{'object_name': 'Group', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54FF0>, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Permission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66B70>, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auth/', 'app_label': 'auth'}, {'name': 'Auths', 'models': [{'object_name': 'HierarchyType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66770>, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Hierarchy', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E660B0>, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Menu', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66750>, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Person', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66CF0>, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyGroup', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66BB0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyPermission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66DD0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'User', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54E10>, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auths/', 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387770>, 'models': [{'object_name': 'ContentType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54DF0>, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'models': [{'object_name': 'AccessToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66830>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Application', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54C50>, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Grant', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66D10>, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'RefreshToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54FD0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'app_label': 'oauth2_provider'}, {'name': 'Registro', 'models': [{'object_name': 'ActividadColegio', 'name': 'ActividadesColegio', 'admin_url': '/admin/registro/actividadcolegio/', 'add_url': '/admin/registro/actividadcolegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'ActividadEscolar', 'name': 'ActividadesEscolares', 'admin_url': '/admin/registro/actividadescolar/', 'add_url': '/admin/registro/actividadescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Alumno', 'name': 'Alumnos', 'admin_url': '/admin/registro/alumno/', 'add_url': '/admin/registro/alumno/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Apoderado', 'name': 'Apoderados', 'admin_url': '/admin/registro/apoderado/', 'add_url': '/admin/registro/apoderado/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Asistencia', 'name': 'Asistencias', 'admin_url': '/admin/registro/asistencia/', 'add_url': '/admin/registro/asistencia/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargaAcademica', 'name': 'CargasAcademicas', 'admin_url': '/admin/registro/cargaacademica/', 'add_url': '/admin/registro/cargaacademica/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargoEscolar', 'name': 'CargosEscolares', 'admin_url': '/admin/registro/cargoescolar/', 'add_url': '/admin/registro/cargoescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Colegio', 'name': 'Colegios', 'admin_url': '/admin/registro/colegio/', 'add_url': '/admin/registro/colegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Curso', 'name': 'Cursos', 'admin_url': '/admin/registro/curso/', 'add_url': '/admin/registro/curso/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Docente', 'name': 'Docentes', 'admin_url': '/admin/registro/docente/', 'add_url': '/admin/registro/docente/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Persona', 'name': 'Personas', 'admin_url': '/admin/registro/persona/', 'add_url': '/admin/registro/persona/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Salon', 'name': 'Salones', 'admin_url': '/admin/registro/salon/', 'add_url': '/admin/registro/salon/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/registro/', 'app_label': 'registro'}], 'site_url': '/', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372BB0>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372B50>, 'LANGUAGE_BIDI': False, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372C10>}]"
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'True': True, 'None': None}, {'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04EF1BB0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x040B96A8>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x03D5D2F0>, 'user': <SimpleLazyObject: <User: sysce>>, 'request': <WSGIRequest: GET '/admin/'>, 'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387650>, 'models': [{'object_name': 'Group', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0410C7B0>, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Permission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B830>, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auth/', 'app_label': 'auth'}, {'name': 'Auths', 'models': [{'object_name': 'HierarchyType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B810>, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Hierarchy', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B430>, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Menu', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54C10>, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Person', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B0D0>, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyGroup', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B0F0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyPermission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B110>, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'User', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B790>, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auths/', 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387770>, 'models': [{'object_name': 'ContentType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x040AFEB0>, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'models': [{'object_name': 'AccessToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B890>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Application', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E93A50>, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Grant', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B330>, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'RefreshToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0412B6F0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'app_label': 'oauth2_provider'}, {'name': 'Registro', 'models': [{'object_name': 'ActividadColegio', 'name': 'ActividadesColegio', 'admin_url': '/admin/registro/actividadcolegio/', 'add_url': '/admin/registro/actividadcolegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'ActividadEscolar', 'name': 'ActividadesEscolares', 'admin_url': '/admin/registro/actividadescolar/', 'add_url': '/admin/registro/actividadescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Alumno', 'name': 'Alumnos', 'admin_url': '/admin/registro/alumno/', 'add_url': '/admin/registro/alumno/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Apoderado', 'name': 'Apoderados', 'admin_url': '/admin/registro/apoderado/', 'add_url': '/admin/registro/apoderado/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Asistencia', 'name': 'Asistencias', 'admin_url': '/admin/registro/asistencia/', 'add_url': '/admin/registro/asistencia/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargaAcademica', 'name': 'CargasAcademicas', 'admin_url': '/admin/registro/cargaacademica/', 'add_url': '/admin/registro/cargaacademica/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargoEscolar', 'name': 'CargosEscolares', 'admin_url': '/admin/registro/cargoescolar/', 'add_url': '/admin/registro/cargoescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Colegio', 'name': 'Colegios', 'admin_url': '/admin/registro/colegio/', 'add_url': '/admin/registro/colegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Curso', 'name': 'Cursos', 'admin_url': '/admin/registro/curso/', 'add_url': '/admin/registro/curso/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Docente', 'name': 'Docentes', 'admin_url': '/admin/registro/docente/', 'add_url': '/admin/registro/docente/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Persona', 'name': 'Personas', 'admin_url': '/admin/registro/persona/', 'add_url': '/admin/registro/persona/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Salon', 'name': 'Salones', 'admin_url': '/admin/registro/salon/', 'add_url': '/admin/registro/salon/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/registro/', 'app_label': 'registro'}], 'LANGUAGE_CODE': 'en-us', 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387650>, 'models': [{'object_name': 'Group', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54FF0>, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Permission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66B70>, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auth/', 'app_label': 'auth'}, {'name': 'Auths', 'models': [{'object_name': 'HierarchyType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66770>, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Hierarchy', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E660B0>, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Menu', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66750>, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Person', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66CF0>, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyGroup', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66BB0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'UserHierarchyPermission', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66DD0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'User', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54E10>, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/auths/', 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03387770>, 'models': [{'object_name': 'ContentType', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54DF0>, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'models': [{'object_name': 'AccessToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66830>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Application', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54C50>, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Grant', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E66D10>, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'RefreshToken', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E54FD0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'app_label': 'oauth2_provider'}, {'name': 'Registro', 'models': [{'object_name': 'ActividadColegio', 'name': 'ActividadesColegio', 'admin_url': '/admin/registro/actividadcolegio/', 'add_url': '/admin/registro/actividadcolegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'ActividadEscolar', 'name': 'ActividadesEscolares', 'admin_url': '/admin/registro/actividadescolar/', 'add_url': '/admin/registro/actividadescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Alumno', 'name': 'Alumnos', 'admin_url': '/admin/registro/alumno/', 'add_url': '/admin/registro/alumno/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Apoderado', 'name': 'Apoderados', 'admin_url': '/admin/registro/apoderado/', 'add_url': '/admin/registro/apoderado/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Asistencia', 'name': 'Asistencias', 'admin_url': '/admin/registro/asistencia/', 'add_url': '/admin/registro/asistencia/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargaAcademica', 'name': 'CargasAcademicas', 'admin_url': '/admin/registro/cargaacademica/', 'add_url': '/admin/registro/cargaacademica/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'CargoEscolar', 'name': 'CargosEscolares', 'admin_url': '/admin/registro/cargoescolar/', 'add_url': '/admin/registro/cargoescolar/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Colegio', 'name': 'Colegios', 'admin_url': '/admin/registro/colegio/', 'add_url': '/admin/registro/colegio/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Curso', 'name': 'Cursos', 'admin_url': '/admin/registro/curso/', 'add_url': '/admin/registro/curso/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Docente', 'name': 'Docentes', 'admin_url': '/admin/registro/docente/', 'add_url': '/admin/registro/docente/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Persona', 'name': 'Personas', 'admin_url': '/admin/registro/persona/', 'add_url': '/admin/registro/persona/add/', 'perms': {'change': True, 'delete': True, 'add': True}}, {'object_name': 'Salon', 'name': 'Salones', 'admin_url': '/admin/registro/salon/', 'add_url': '/admin/registro/salon/add/', 'perms': {'change': True, 'delete': True, 'add': True}}], 'has_module_perms': True, 'app_url': '/admin/registro/', 'app_label': 'registro'}], 'site_url': '/', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372BB0>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372B50>, 'LANGUAGE_BIDI': False, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03372C10>}]"
+[2016-11-04 12:36:41] DEBUG [django.db.backends:90] (0.016) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = 'f12628a577814909b42541c1b71bdcea' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 17410
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\\\Users\\\\PANTIG~1\\\\DOCUME~1\\\\DISEOW~1\\\\sysce\\\\ve_sysce\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-04 12:36:41] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'C:\\Users\\PANTIG~1\\DOCUME~1\\DISEOW~1\\sysce\\ve_sysce\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'sysce_service_apps.auths_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\Users\\PANTIGOSOs\\Documents\\Diseño Web\\sysce\\sysce_service\\sysce_service_apps\\registro_api\\urls.py'> (None:None) ^api/registro/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'sysce_service_apps.registro_api.urls' from 'C:\\\\Users\\\\PANTIGOSOs\\\\Documents\\\\Diseño Web\\\\sysce\\\\sysce_service\\\\sysce_service_apps\\\\registro_api\\\\urls.py'> (None:None) ^api/registro/>"
+[2016-11-04 12:36:41] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-04 12:36:41] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2489
+[2016-11-04 12:36:41] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2016-11-04 12:36:43] INFO [django.server:131] "OPTIONS /api/auths/localuserinfo/ HTTP/1.1" 200 0
+[2016-11-04 12:36:43] INFO [django.server:131] "OPTIONS /api/auths/usermenu/ HTTP/1.1" 200 0
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.000) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = 'f12628a577814909b42541c1b71bdcea' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 12:36:43] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 405
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.013) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."is_active" = 1 AND "auths_menu"."module" = 'BACKEND') ORDER BY "auths_menu"."pos" ASC; args=(True, 'BACKEND')
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'xndv5cc4fg8fpg2d7je33728tohmd143' LIMIT 1; args=('xndv5cc4fg8fpg2d7je33728tohmd143',)
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 12:36:43] DEBUG [django.db.backends:90] (0.003) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'xndv5cc4fg8fpg2d7je33728tohmd143', 'NTllMGI5ZTYyN2JkM2ZmOWVmZDE2ZWI1MWVmODQ0YzYyNjllYzM0Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-04 17:37:13.615539'; args=('xndv5cc4fg8fpg2d7je33728tohmd143', 'NTllMGI5ZTYyN2JkM2ZmOWVmZDE2ZWI1MWVmODQ0YzYyNjllYzM0Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-04 17:37:13.615539')
+[2016-11-04 12:36:43] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-04 12:36:46] INFO [django.server:131] "OPTIONS /api/registro/personas/ HTTP/1.1" 200 0
+[2016-11-04 12:36:46] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:46] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:46] DEBUG [django.db.backends:90] (0.011) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 12:36:46] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
+[2016-11-04 12:36:46] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 706
+[2016-11-04 12:36:49] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:49] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:49] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 12:36:49] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
+[2016-11-04 12:36:49] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 706
+[2016-11-04 12:36:50] DEBUG [django.db.backends:90] (0.007) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:50] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:50] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 12:36:50] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
+[2016-11-04 12:36:50] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 706
+[2016-11-04 12:36:52] INFO [django.server:131] "OPTIONS /api/registro/cursos/ HTTP/1.1" 200 0
+[2016-11-04 12:36:52] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:52] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:52] DEBUG [django.db.backends:90] (0.001) SELECT "registro_curso"."id", "registro_curso"."nombre", "registro_curso"."horas", "registro_curso"."estado", "registro_curso"."docente_id" FROM "registro_curso"; args=()
+[2016-11-04 12:36:52] INFO [django.server:131] "GET /api/registro/cursos/ HTTP/1.1" 200 106
+[2016-11-04 12:36:53] INFO [django.server:131] "OPTIONS /api/registro/colegios/ HTTP/1.1" 200 0
+[2016-11-04 12:36:53] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:53] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:53] DEBUG [django.db.backends:90] (0.001) SELECT "registro_colegio"."id", "registro_colegio"."nombre", "registro_colegio"."direccion", "registro_colegio"."departamento" FROM "registro_colegio"; args=()
+[2016-11-04 12:36:53] INFO [django.server:131] "GET /api/registro/colegios/ HTTP/1.1" 200 80
+[2016-11-04 12:36:54] INFO [django.server:131] "OPTIONS /api/registro/cargosescolares/ HTTP/1.1" 200 0
+[2016-11-04 12:36:54] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:54] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:54] DEBUG [django.db.backends:90] (0.000) SELECT "registro_cargoescolar"."id", "registro_cargoescolar"."nombre", "registro_cargoescolar"."tipo" FROM "registro_cargoescolar"; args=()
+[2016-11-04 12:36:54] INFO [django.server:131] "GET /api/registro/cargosescolares/ HTTP/1.1" 200 46
+[2016-11-04 12:36:55] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:55] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:55] DEBUG [django.db.backends:90] (0.001) SELECT "registro_colegio"."id", "registro_colegio"."nombre", "registro_colegio"."direccion", "registro_colegio"."departamento" FROM "registro_colegio"; args=()
+[2016-11-04 12:36:55] INFO [django.server:131] "GET /api/registro/colegios/ HTTP/1.1" 200 80
+[2016-11-04 12:36:56] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:56] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:56] DEBUG [django.db.backends:90] (0.000) SELECT "registro_curso"."id", "registro_curso"."nombre", "registro_curso"."horas", "registro_curso"."estado", "registro_curso"."docente_id" FROM "registro_curso"; args=()
+[2016-11-04 12:36:56] INFO [django.server:131] "GET /api/registro/cursos/ HTTP/1.1" 200 106
+[2016-11-04 12:36:57] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:57] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 12:36:57] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 12:36:57] DEBUG [django.db.backends:90] (0.000) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
+[2016-11-04 12:36:57] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 706
