@@ -9,7 +9,7 @@ app
 
         }),
 
-        Categoria: $resource(url + "categorias/:id/", { 'id': '@id' }, {
+        Curso: $resource(url + "cursos/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "list": { method: 'GET', isArray: true, params: { query: '@query' } }
 

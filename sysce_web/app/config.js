@@ -108,8 +108,8 @@ app.constant('ROUTERS', [{
     },
 
 }, {
-    "catalogo": {
-        "url": "/catalogo",
+    "registro": {
+        "url": "/registro",
         "views": {
             "": {
                 "templateUrl": "app/views/layout.html"
@@ -122,59 +122,60 @@ app.constant('ROUTERS', [{
             }
         }
     },
-    "catalogo.catalogo": {
-        "url": "/catalogo",
+    "registro.registro": {
+        "url": "/registro",
         "template": "<div ui-view ></div>"
     }
 }, {
-    "catalogo.catalogo.categorias": {
-        "url": "/categorias",
+    "registro.registro.curso": {
+        "url": "/curso",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Registro",
+            "page": "Cursos"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/categorias/index.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/cursos/index.html"
     },
-    "catalogo.catalogo.categoriasNew": {
-        "url": "/categorias/new",
+    "registro.registro.cursosNew": {
+        "url": "/cursos/new",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Registro",
+            "page": "Cursos"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/categorias/form.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/cursos/form.html"
     },
-    "catalogo.catalogo.categoriasEdit": {
-        "url": "/categorias/:id/edit",
+    "registro.registro.cursosEdit": {
+        "url": "/cursos/:id/edit",
         "data": {
-            "section": "Catálogo",
-            "page": "Categorías"
+            "section": "Registro",
+            "page": "Cursos"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/categorias/form.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/cursos/form.html"
     }
 }, {
-    "catalogo.catalogo.autores": {
+    
+    "registro.registro.autores": {
         "url": "/autores",
         "data": {
             "section": "Catálogo",
             "page": "Autores"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/autores/index.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/autores/index.html"
     },
-    "catalogo.catalogo.autoresNew": {
+    "registro.registro.autoresNew": {
         "url": "/autores/new",
         "data": {
             "section": "Catálogo",
             "page": "Autores"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/autores/form.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/autores/form.html"
     },
-    "catalogo.catalogo.autoresEdit": {
+    "registro.registro.autoresEdit": {
         "url": "/autores/:id/edit",
         "data": {
             "section": "Catálogo",
             "page": "Autores"
         },
-        "templateUrl": "sysce_web_apps/catalogo_web/views/autores/form.html"
+        "templateUrl": "sysce_web_apps/registro_web/views/autores/form.html"
     }
 
 }]);

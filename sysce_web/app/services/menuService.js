@@ -93,20 +93,22 @@ app
     sections.push({
 
         menu: [{
-            title: 'Catálogo',
+            title: 'Registro',
             type: 'toggle',
-            state: 'catalogo.catalogo',
+            state: 'registro.registro',
             menu_items: [{
-                title: 'Categorías',
-                state: 'catalogo.catalogo.categorias',
+                title: 'Cursos',
+                state: 'registro.registro.curso',
                 type: 'link'
             }, {
-                title: 'Autores',
-                state: 'catalogo.catalogo.autores',
+                title: 'Salones',
+                state: 'registro.registro.salon',
                 type: 'link'
             }, ]
         }]
     });
+
+
 
     authService.getMenu().then(function(r) {
         menu = r.data;

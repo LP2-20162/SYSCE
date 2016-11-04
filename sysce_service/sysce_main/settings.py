@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     'sysce_service_apps.auths',
     'sysce_service_apps.auths_api',
 
-    'sysce_service_apps.catalogo',
-    'sysce_service_apps.catalogo_api',
+    'sysce_service_apps.registro',
+    'sysce_service_apps.registro_api',
 ]
 
 MIDDLEWARE_CLASSES = [
