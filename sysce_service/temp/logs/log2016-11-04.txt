@@ -65,3 +65,7 @@
 [2016-11-04 14:49:18] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [william] [GET] User is authenticated
 [2016-11-04 14:50:03] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [william] [GET] User is authenticated
 [2016-11-04 15:02:02] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [william] [GET] User is authenticated
+[2016-11-04 15:38:24] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [sysce] [GET] User is authenticated
+[2016-11-04 17:48:57] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [sysce] [GET] User is authenticated
+[2016-11-04 17:50:46] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [sysce] [GET] User is authenticated
+[2016-11-04 17:53:21] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
