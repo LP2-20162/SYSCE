@@ -12,8 +12,8 @@ app
 
         setting: {
             theme: {
-                primary: 'indigo',
-                accent: 'purple',
+                primary: 'tuel',
+                accent: 'indigo',
                 warn: 'amber'
             },
             asideFolded: false
