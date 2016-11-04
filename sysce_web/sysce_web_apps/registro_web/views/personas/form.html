@@ -1,35 +1,51 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <form name="dForm" role="form" ng-controller="AutorSaveCtrl">
+            <form name="dForm" role="form" ng-controller="PersonaSaveCtrl">
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
                             <img class="md-user-avatar" src="media/img/list/60.jpeg" />
                         </md-card-avatar>
                         <md-card-header-text>
-                            <span class="md-headline">Autor</span>
-                            <span class="md-subhead">Trabajar con autores</span>
+                            <span class="md-headline">Persona</span>
+                            <span class="md-subhead">Trabajar con Personas</span>
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Nombre</label>
-                                <input name="nombre" ng-model="autor.nombre" required>
+                                <input name="nombre" ng-model="persona.nombre" required>
                                 <div ng-messages="dForm.nombre.$error">
                                     <div ng-message="required">This is required.</div>
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Direccion</label>
-                                <input name="direccion" ng-model="autor.direccion">
+                                <label>Apellido Paterno</label>
+                                <input name="apellido_paterno" ng-model="persona.apellido_paterno">
+                            </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                <label>Apellido Materno</label>
+                                <input name="apellido_materno" ng-model="persona.apellido_materno">
+                            </md-input-container>
+                                <label>Dni</label>
+                                <input name="dni" ng-model="persona.dni">
+                            </md-input-container>
+                               </md-input-container>
+                                <label>Telefono</label>
+                                <input name="telefono" ng-model="persona.telefono">
+                            </md-input-container>
+
+                               </md-input-container>
+                                <label>Sexo</label>
+                                <input name="sexo" ng-model="persona.sexo">
                             </md-input-container>
                         </div>
                         <md-input-container class="md-block">
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Fecha Nac.</label>
-                                <input name="fecha_nac" ng-model="autor.fecha_nac">
+                                <input name="fecha_nac" ng-model="persona.fecha_nac">
                             </md-input-container>
                         </md-input-container>
                     </md-card-content>
@@ -42,8 +58,8 @@
                         </md-card-icon-actions>
                         <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
                         <md-button type="submit" ng-click="save()" class="md-raised md-primary">
-                            <span ng-show="autor.id == null">Create</span>
-                            <span ng-show="autor.id">Update</span>
+                            <span ng-show="persona.id == null">Create</span>
+                            <span ng-show="persona.id">Update</span>
                         </md-button>
                     </md-card-actions>
                 </md-card>

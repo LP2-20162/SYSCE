@@ -19,7 +19,7 @@ app
             
 
         }),
-        Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {
+        Persona: $resource(url + "personas/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {
                 method: 'GET',

@@ -1,17 +1,17 @@
 app
 // =========================================================================
-// Show View and Delete Autor 
+// Show View and Delete Persona 
 // =========================================================================
-    .controller("AutorCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
+    .controller("PersonaCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.fields = 'nombre';
     var params = {};
     $scope.lista = [];
-    $scope.autor = {};
+    $scope.persona = {};
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        catalogoService.Autor.query(params, function(r) {
+        registroService.Persona.query(params, function(r) {
             $scope.lista = r.results;
             $scope.options = r.options;
             $scope.isLoading = false;
@@ -35,9 +35,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
-            catalogoService.Autor.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó autor:" + JSON.stringify(d));
-                toastr.success('Se eliminó autor ' + d.nombre, 'Autor');
+            registroService.Persona.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó Persona:" + JSON.stringify(d));
+                toastr.success('Se eliminó Persona ' + d.nombre, 'Persona');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -49,15 +49,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Autor
+// Create and Update Persona
 // =========================================================================
-.controller("AutorSaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
+.controller("PersonaSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.autor = {};
+    $scope.persona = {};
 
     $scope.sel = function() {
-        catalogoService.Autor.get({ id: $stateParams.id }, function(r) {
-            $scope.autor = r;
+        registroService.Persona.get({ id: $stateParams.id }, function(r) {
+            $scope.persona = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,20 +68,20 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.autor.id) {
-            catalogoService.Autor.update({ id: $scope.autor.id }, $scope.autor, function(r) {
+        if ($scope.persona.id) {
+            registroService.Persona.update({ id: $scope.persona.id }, $scope.autor, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se editó Persona ' + r.nombre, 'Persona');
+                $state.go('registro.registro.personas');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            catalogoService.Autor.save($scope.autor, function(r) {
+            registroService.Persona.save($scope.autor, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se insertó Persona ' + r.nombre, 'Persona');
+                $state.go('registro.registro.personas');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -90,7 +90,7 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.autores');
+        $state.go('registro.registro.personas');
 
 
         

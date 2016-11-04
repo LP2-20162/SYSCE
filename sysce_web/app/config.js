@@ -127,6 +127,32 @@ app.constant('ROUTERS', [{
         "template": "<div ui-view ></div>"
     }
 }, {
+    "registro.registro.persona":  {
+        "url": "/persona",
+        "data": {
+            "section": "Registro",
+            "page": "Personas"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/personas/index.html"
+    },
+    "registro.registro.personasNew": {
+        "url": "/personas/new",
+        "data": {
+            "section": "Registro",
+            "page": "Personas"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/personas/form.html"
+    },
+    "registro.registro.personasEdit": {
+        "url": "/personas/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "Personas"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/personas/form.html"
+    }
+
+},  {
     "registro.registro.curso": {
         "url": "/curso",
         "data": {
@@ -151,7 +177,7 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cursos/form.html"
     }
-},{
+}, {
     "registro.registro.colegio": {
         "url": "/colegio",
         "data": {
@@ -200,32 +226,6 @@ app.constant('ROUTERS', [{
             "page": "CargoEscolar"
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/form.html"
-    }
-},{
-    
-    "registro.registro.autores": {
-        "url": "/autores",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "sysce_web_apps/registro_web/views/autores/index.html"
-    },
-    "registro.registro.autoresNew": {
-        "url": "/autores/new",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "sysce_web_apps/registro_web/views/autores/form.html"
-    },
-    "registro.registro.autoresEdit": {
-        "url": "/autores/:id/edit",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "sysce_web_apps/registro_web/views/autores/form.html"
     }
 
 }]);

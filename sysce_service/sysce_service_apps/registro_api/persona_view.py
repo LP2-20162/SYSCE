@@ -7,8 +7,8 @@ from django.db.models import Q
 from operator import __or__ as OR
 from functools import reduce
 
-from sysce_service_apps.catalogo.models.autor import Autor
-from sysce_service_apps.catalogo.models.libro import Libro
+from sysce_service_apps.registro.models.persona import Persona
+
 
 from sysce_service_apps.utils.security import log_params
 from sysce_service_apps.utils.permissions import ModelPermission
@@ -27,7 +27,7 @@ class MiPermission(permissions.BasePermission):
     """
 
     def has_permission(self, request, view):
-        perms = ('catalogo.list_autor',)  # cambie aqui el permiso
+        perms = ('registro.list_persona',)  # cambie aqui el permiso
         if request.user.has_perms(perms):
             return True
         else:
@@ -39,16 +39,17 @@ class MiPermission(permissions.BasePermission):
             return False
 
 
-class AutorSerializer(serializers.ModelSerializer):
+class PersonaSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Autor
+        model = Persona
+        fields = '__all__'
         # fields = ('url', 'username', 'email', 'is_staff')
 
 
-class AutorViewSet(ModelPagination, viewsets.ModelViewSet):
-    queryset = Autor.objects.all()
-    serializer_class = AutorSerializer
+class PersonaViewSet(ModelPagination, viewsets.ModelViewSet):
+    queryset = Persona.objects.all()
+    serializer_class = PersonaSerializer
     permission_classes = [ModelPermission, ]
 
     """
@@ -79,27 +80,15 @@ class AutorViewSet(ModelPagination, viewsets.ModelViewSet):
 
     @list_route(url_path='export', methods=['get'],
                 permission_classes=[MiPermission])
-    def reporte_autores(self, request, *args, **kwargs):
+    def reporte_personas(self, request, *args, **kwargs):
         lista = []
         pre_query = self.get_queryset().values()
         for x in pre_query:
             lista.append([x['nombre'], x['direccion']])
         print(lista)
-        #data = Autor.objects.pdf(lista, 'mi primer reporte')
+        # data = Autor.objects.pdf(lista, 'mi primer reporte')
         data = self.get_queryset().filter()
         # return Response({'detail':str('Exportado a PDF')})
         # return Response(data)
         serializer = self.get_serializer(data, many=True)
         return Response(serializer.data)
-
-    @detail_route(url_path='libros')
-    def autor_libros(self, request, pk=None):
-        autor = self.get_queryset().get(pk=pk)
-        libros = Libro.objects.filter(autors=pk).values()
-        libros_count = Libro.objects.filter(autors=pk).count()
-        results = {
-            'autor': autor.nombre,
-            'cantidad': libros_count,
-            'libros': libros
-        }
-        return Response({'detail': results})

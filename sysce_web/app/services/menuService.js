@@ -97,6 +97,10 @@ app
             type: 'toggle',
             state: 'registro.registro',
             menu_items: [{
+                title: 'Persona',
+                state: 'registro.registro.persona',
+                type: 'link'
+            },{
                 title: 'Cursos',
                 state: 'registro.registro.curso',
                 type: 'link'
