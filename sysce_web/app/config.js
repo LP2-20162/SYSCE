@@ -177,6 +177,31 @@ app.constant('ROUTERS', [{
         "templateUrl": "sysce_web_apps/registro_web/views/colegios/form.html"
     }
 }, {
+    "registro.registro.cargoescolar": {
+        "url": "/cargoescolar",
+        "data": {
+            "section": "Registro",
+            "page": "CargoEscolar"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/index.html"
+    },
+    "registro.registro.cargosescolaresNew": {
+        "url": "//new",
+        "data": {
+            "section": "Registro",
+            "page": "CargoEscolar"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/form.html"
+    },
+    "registro.registro.cargosescolaresEdit": {
+        "url": "/cargosescolares/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "CargoEscolar"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/form.html"
+    }
+},{
     
     "registro.registro.autores": {
         "url": "/autores",

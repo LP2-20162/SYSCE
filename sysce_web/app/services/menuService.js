@@ -108,6 +108,10 @@ app
                 title: 'Colegios',
                 state: 'registro.registro.colegio',
                 type: 'link'
+            },{
+                title: 'CargoEscolar',
+                state: 'registro.registro.cargoescolar',
+                type: 'link'
             },]
         }]
     });

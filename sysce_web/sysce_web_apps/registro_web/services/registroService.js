@@ -14,6 +14,11 @@ app
             
 
         }),
+        CargoEscolar: $resource(url + "cargosescolares/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            
+
+        }),
         Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {
