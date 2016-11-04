@@ -8884,3 +8884,414 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<Reg
 [2016-11-04 11:45:55] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
 [2016-11-04 11:45:55] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
 [2016-11-04 11:45:55] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 704
+[2016-11-04 11:50:22] DEBUG [django.db.backends:90] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:22.092546' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:22.092546', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:22] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:22] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/app_index.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x044AE470>, 'user': <SimpleLazyObject: <User: sysce>>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0581C618>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x055FDDF0>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'ERROR': 40}, 'request': <WSGIRequest: GET '/admin/registro/'>}, {}, {'site_url': '/', 'has_permission': True, 'available_apps': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'add_url': '/admin/auth/group/add/', 'admin_url': '/admin/auth/group/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E490>, 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auth/permission/add/', 'admin_url': '/admin/auth/permission/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A9350>, 'object_name': 'Permission', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B070D0>}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'admin_url': '/admin/auths/hierarchytype/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A9050>, 'object_name': 'HierarchyType', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'admin_url': '/admin/auths/hierarchy/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8F10>, 'object_name': 'Hierarchy', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/menu/add/', 'admin_url': '/admin/auths/menu/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8950>, 'object_name': 'Menu', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/person/add/', 'admin_url': '/admin/auths/person/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F670>, 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'admin_url': '/admin/auths/userhierarchygroup/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E510>, 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'admin_url': '/admin/auths/userhierarchypermission/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8E10>, 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/user/add/', 'admin_url': '/admin/auths/user/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E4D0>, 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'name': 'Auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'admin_url': '/admin/contenttypes/contenttype/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E330>, 'object_name': 'ContentType', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B07610>}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F850>, 'object_name': 'AccessToken', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'admin_url': '/admin/oauth2_provider/application/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F970>, 'object_name': 'Application', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'admin_url': '/admin/oauth2_provider/grant/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A93F0>, 'object_name': 'Grant', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A90F0>, 'object_name': 'RefreshToken', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'name': 'Django OAuth Toolkit'}, {'has_module_perms': True, 'app_url': '/admin/registro/', 'models': [{'add_url': '/admin/registro/actividadcolegio/add/', 'admin_url': '/admin/registro/actividadcolegio/', 'name': 'ActividadesColegio', 'object_name': 'ActividadColegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/actividadescolar/add/', 'admin_url': '/admin/registro/actividadescolar/', 'name': 'ActividadesEscolares', 'object_name': 'ActividadEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/alumno/add/', 'admin_url': '/admin/registro/alumno/', 'name': 'Alumnos', 'object_name': 'Alumno', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/apoderado/add/', 'admin_url': '/admin/registro/apoderado/', 'name': 'Apoderados', 'object_name': 'Apoderado', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/asistencia/add/', 'admin_url': '/admin/registro/asistencia/', 'name': 'Asistencias', 'object_name': 'Asistencia', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargaacademica/add/', 'admin_url': '/admin/registro/cargaacademica/', 'name': 'CargasAcademicas', 'object_name': 'CargaAcademica', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargoescolar/add/', 'admin_url': '/admin/registro/cargoescolar/', 'name': 'CargosEscolares', 'object_name': 'CargoEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/colegio/add/', 'admin_url': '/admin/registro/colegio/', 'name': 'Colegios', 'object_name': 'Colegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/curso/add/', 'admin_url': '/admin/registro/curso/', 'name': 'Cursos', 'object_name': 'Curso', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/docente/add/', 'admin_url': '/admin/registro/docente/', 'name': 'Docentes', 'object_name': 'Docente', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/persona/add/', 'admin_url': '/admin/registro/persona/', 'name': 'Personas', 'object_name': 'Persona', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/salon/add/', 'admin_url': '/admin/registro/salon/', 'name': 'Salones', 'object_name': 'Salon', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'registro', 'name': 'Registro'}], 'title': 'Registro administration', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03AF2BB0>, 'app_list': [{'has_module_perms': True, 'app_url': '/admin/registro/', 'models': [{'add_url': '/admin/registro/actividadcolegio/add/', 'admin_url': '/admin/registro/actividadcolegio/', 'name': 'ActividadesColegio', 'object_name': 'ActividadColegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/actividadescolar/add/', 'admin_url': '/admin/registro/actividadescolar/', 'name': 'ActividadesEscolares', 'object_name': 'ActividadEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/alumno/add/', 'admin_url': '/admin/registro/alumno/', 'name': 'Alumnos', 'object_name': 'Alumno', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/apoderado/add/', 'admin_url': '/admin/registro/apoderado/', 'name': 'Apoderados', 'object_name': 'Apoderado', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/asistencia/add/', 'admin_url': '/admin/registro/asistencia/', 'name': 'Asistencias', 'object_name': 'Asistencia', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargaacademica/add/', 'admin_url': '/admin/registro/cargaacademica/', 'name': 'CargasAcademicas', 'object_name': 'CargaAcademica', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargoescolar/add/', 'admin_url': '/admin/registro/cargoescolar/', 'name': 'CargosEscolares', 'object_name': 'CargoEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/colegio/add/', 'admin_url': '/admin/registro/colegio/', 'name': 'Colegios', 'object_name': 'Colegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/curso/add/', 'admin_url': '/admin/registro/curso/', 'name': 'Cursos', 'object_name': 'Curso', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/docente/add/', 'admin_url': '/admin/registro/docente/', 'name': 'Docentes', 'object_name': 'Docente', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/persona/add/', 'admin_url': '/admin/registro/persona/', 'name': 'Personas', 'object_name': 'Persona', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/salon/add/', 'admin_url': '/admin/registro/salon/', 'name': 'Salones', 'object_name': 'Salon', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'registro', 'name': 'Registro'}], 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03AF2B50>, 'LANGUAGE_CODE': 'en-us', 'app_label': 'registro', 'LANGUAGE_BIDI': False}]"
+[2016-11-04 11:50:22] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/app_index.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x044AE470>, 'user': <SimpleLazyObject: <User: sysce>>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0581C618>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x055FDDF0>, 'DEFAULT_MESSAGE_LEVELS': {'SUCCESS': 25, 'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'ERROR': 40}, 'request': <WSGIRequest: GET '/admin/registro/'>}, {}, {'site_url': '/', 'has_permission': True, 'available_apps': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'add_url': '/admin/auth/group/add/', 'admin_url': '/admin/auth/group/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E490>, 'object_name': 'Group', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auth/permission/add/', 'admin_url': '/admin/auth/permission/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A9350>, 'object_name': 'Permission', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B070D0>}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'admin_url': '/admin/auths/hierarchytype/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A9050>, 'object_name': 'HierarchyType', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'admin_url': '/admin/auths/hierarchy/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8F10>, 'object_name': 'Hierarchy', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/menu/add/', 'admin_url': '/admin/auths/menu/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8950>, 'object_name': 'Menu', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/person/add/', 'admin_url': '/admin/auths/person/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F670>, 'object_name': 'Person', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'admin_url': '/admin/auths/userhierarchygroup/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E510>, 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'admin_url': '/admin/auths/userhierarchypermission/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x055D8E10>, 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/auths/user/add/', 'admin_url': '/admin/auths/user/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E4D0>, 'object_name': 'User', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'name': 'Auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'admin_url': '/admin/contenttypes/contenttype/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0583E330>, 'object_name': 'ContentType', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B07610>}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F850>, 'object_name': 'AccessToken', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'admin_url': '/admin/oauth2_provider/application/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0488F970>, 'object_name': 'Application', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'admin_url': '/admin/oauth2_provider/grant/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A93F0>, 'object_name': 'Grant', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x048A90F0>, 'object_name': 'RefreshToken', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'name': 'Django OAuth Toolkit'}, {'has_module_perms': True, 'app_url': '/admin/registro/', 'models': [{'add_url': '/admin/registro/actividadcolegio/add/', 'admin_url': '/admin/registro/actividadcolegio/', 'name': 'ActividadesColegio', 'object_name': 'ActividadColegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/actividadescolar/add/', 'admin_url': '/admin/registro/actividadescolar/', 'name': 'ActividadesEscolares', 'object_name': 'ActividadEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/alumno/add/', 'admin_url': '/admin/registro/alumno/', 'name': 'Alumnos', 'object_name': 'Alumno', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/apoderado/add/', 'admin_url': '/admin/registro/apoderado/', 'name': 'Apoderados', 'object_name': 'Apoderado', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/asistencia/add/', 'admin_url': '/admin/registro/asistencia/', 'name': 'Asistencias', 'object_name': 'Asistencia', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargaacademica/add/', 'admin_url': '/admin/registro/cargaacademica/', 'name': 'CargasAcademicas', 'object_name': 'CargaAcademica', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargoescolar/add/', 'admin_url': '/admin/registro/cargoescolar/', 'name': 'CargosEscolares', 'object_name': 'CargoEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/colegio/add/', 'admin_url': '/admin/registro/colegio/', 'name': 'Colegios', 'object_name': 'Colegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/curso/add/', 'admin_url': '/admin/registro/curso/', 'name': 'Cursos', 'object_name': 'Curso', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/docente/add/', 'admin_url': '/admin/registro/docente/', 'name': 'Docentes', 'object_name': 'Docente', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/persona/add/', 'admin_url': '/admin/registro/persona/', 'name': 'Personas', 'object_name': 'Persona', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/salon/add/', 'admin_url': '/admin/registro/salon/', 'name': 'Salones', 'object_name': 'Salon', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'registro', 'name': 'Registro'}], 'title': 'Registro administration', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03AF2BB0>, 'app_list': [{'has_module_perms': True, 'app_url': '/admin/registro/', 'models': [{'add_url': '/admin/registro/actividadcolegio/add/', 'admin_url': '/admin/registro/actividadcolegio/', 'name': 'ActividadesColegio', 'object_name': 'ActividadColegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/actividadescolar/add/', 'admin_url': '/admin/registro/actividadescolar/', 'name': 'ActividadesEscolares', 'object_name': 'ActividadEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/alumno/add/', 'admin_url': '/admin/registro/alumno/', 'name': 'Alumnos', 'object_name': 'Alumno', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/apoderado/add/', 'admin_url': '/admin/registro/apoderado/', 'name': 'Apoderados', 'object_name': 'Apoderado', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/asistencia/add/', 'admin_url': '/admin/registro/asistencia/', 'name': 'Asistencias', 'object_name': 'Asistencia', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargaacademica/add/', 'admin_url': '/admin/registro/cargaacademica/', 'name': 'CargasAcademicas', 'object_name': 'CargaAcademica', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/cargoescolar/add/', 'admin_url': '/admin/registro/cargoescolar/', 'name': 'CargosEscolares', 'object_name': 'CargoEscolar', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/colegio/add/', 'admin_url': '/admin/registro/colegio/', 'name': 'Colegios', 'object_name': 'Colegio', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/curso/add/', 'admin_url': '/admin/registro/curso/', 'name': 'Cursos', 'object_name': 'Curso', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/docente/add/', 'admin_url': '/admin/registro/docente/', 'name': 'Docentes', 'object_name': 'Docente', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/persona/add/', 'admin_url': '/admin/registro/persona/', 'name': 'Personas', 'object_name': 'Persona', 'perms': {'add': True, 'change': True, 'delete': True}}, {'add_url': '/admin/registro/salon/add/', 'admin_url': '/admin/registro/salon/', 'name': 'Salones', 'object_name': 'Salon', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'registro', 'name': 'Registro'}], 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03AF2B50>, 'LANGUAGE_CODE': 'en-us', 'app_label': 'registro', 'LANGUAGE_BIDI': False}]"
+[2016-11-04 11:50:22] INFO [django.server:131] "GET /admin/registro/ HTTP/1.1" 200 6986
+[2016-11-04 11:50:22] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2016-11-04 11:50:22] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2016-11-04 11:50:22] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2016-11-04 11:50:23] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 11:50:23] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 11:50:23] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2016-11-04 11:50:23] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:23] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:28.129539' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:28.129539', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" ORDER BY "registro_persona"."id" DESC; args=()
+[2016-11-04 11:50:28] DEBUG [django.template:929] Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in 'None'
+[2016-11-04 11:50:28] DEBUG [django.template:929] Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in "[{'True': True, 'None': None, 'False': False, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04AE47C8>>}]"
+[2016-11-04 11:50:28] DEBUG [django.template:929] Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in 'None'
+[2016-11-04 11:50:28] DEBUG [django.template:929] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in 'None'
+[2016-11-04 11:50:28] DEBUG [django.template:929] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in 'None'
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /admin/registro/persona/ HTTP/1.1" 200 5531
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.007) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:28.606951' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:28.606951', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] DEBUG [django.db.backends:90] (0.002) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2016-11-04 11:50:28] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2016-11-04 11:50:29] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:29] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:33] DEBUG [django.db.backends:90] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:33.622338' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:33.622338', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:33] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:33] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 11:50:33] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" WHERE "registro_persona"."id" = '87115113555d40458f9ad23577890544'; args=('87115113555d40458f9ad23577890544',)
+[2016-11-04 11:50:33] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'persona' AND "django_content_type"."app_label" = 'registro'); args=('persona', 'registro')
+[2016-11-04 11:50:33] INFO [django.server:131] "GET /admin/registro/persona/87115113-555d-4045-8f9a-d23577890544/change/ HTTP/1.1" 200 9304
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2016-11-04 11:50:34] DEBUG [django.db.backends:90] (0.007) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:34.098548' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:34.098548', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[2016-11-04 11:50:34] DEBUG [django.db.backends:90] (0.007) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2016-11-04 11:50:34] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:38.060068' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:38.060068', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" WHERE "registro_persona"."id" = '87115113555d40458f9ad23577890544'; args=('87115113555d40458f9ad23577890544',)
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.000) SELECT (1) AS "a" FROM "registro_persona" WHERE ("registro_persona"."email" = 'josmig@hotmail.com' AND NOT ("registro_persona"."id" = '87115113555d40458f9ad23577890544')) LIMIT 1; args=('josmig@hotmail.com', '87115113555d40458f9ad23577890544')
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.015) UPDATE "registro_persona" SET "nombre" = 'Miguel', "apellido_paterno" = 'Pantigoso', "apellido_materno" = 'Pantigoso', "dni" = 2472123, "telefono" = 325027, "sexo" = 1, "email" = 'josmig@hotmail.com', "fecha_nacimiento" = '2016-11-04', "lugar_nacimiento" = 'Juliaca', "direccion" = 'Jr.Lima 192', "foto" = '' WHERE "registro_persona"."id" = '87115113555d40458f9ad23577890544'; args=('Miguel', 'Pantigoso', 'Pantigoso', 2472123, 325027, True, 'josmig@hotmail.com', '2016-11-04', 'Juliaca', 'Jr.Lima 192', '', '87115113555d40458f9ad23577890544')
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.000) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2016-11-04 16:50:38.120111', 'f12628a577814909b42541c1b71bdcea', 23, '87115113-555d-4045-8f9a-d23577890544', ' Miguel , Pantigoso ', 2, '[{"changed": {"fields": ["nombre"]}}]'); args=['2016-11-04 16:50:38.120111', 'f12628a577814909b42541c1b71bdcea', 23, '87115113-555d-4045-8f9a-d23577890544', ' Miguel , Pantigoso ', 2, '[{"changed": {"fields": ["nombre"]}}]']
+[2016-11-04 11:50:38] INFO [django.server:131] "POST /admin/registro/persona/87115113-555d-4045-8f9a-d23577890544/change/ HTTP/1.1" 302 0
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:38.534486' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:38.534486', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" ORDER BY "registro_persona"."id" DESC; args=()
+[2016-11-04 11:50:38] DEBUG [django.template:929] Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in 'None'
+[2016-11-04 11:50:38] DEBUG [django.template:929] Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in "[{'True': True, 'None': None, 'False': False, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04AFB078>>}]"
+[2016-11-04 11:50:38] DEBUG [django.template:929] Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in 'None'
+[2016-11-04 11:50:38] DEBUG [django.template:929] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in 'None'
+[2016-11-04 11:50:38] DEBUG [django.template:929] Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\PANTIG~1\DOCUME~1\DISEOW~1\sysce\ve_sysce\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in 'None'
+[2016-11-04 11:50:38] INFO [django.server:131] "GET /admin/registro/persona/ HTTP/1.1" 200 5768
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:50:38.782662' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:50:38.782662', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:50:38] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:38] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2016-11-04 11:50:39] INFO [django.server:131] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.006) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.006) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.006) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."is_active" = 1 AND "auths_menu"."module" = 'BACKEND') ORDER BY "auths_menu"."pos" ASC; args=(True, 'BACKEND')
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.000) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.002) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '413faprygyl2ybedgl60shiasa2vllzk' LIMIT 1; args=('413faprygyl2ybedgl60shiasa2vllzk',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.000) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = 'f12628a577814909b42541c1b71bdcea' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.001) BEGIN; args=None
+[2016-11-04 11:50:47] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 405
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.024) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '413faprygyl2ybedgl60shiasa2vllzk', 'NTllMGI5ZTYyN2JkM2ZmOWVmZDE2ZWI1MWVmODQ0YzYyNjllYzM0Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-04 16:51:17.696544'; args=('413faprygyl2ybedgl60shiasa2vllzk', 'NTllMGI5ZTYyN2JkM2ZmOWVmZDE2ZWI1MWVmODQ0YzYyNjllYzM0Mjp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-04 16:51:17.696544')
+[2016-11-04 11:50:47] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.001) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.001) SELECT COUNT(*) AS "__count" FROM "registro_persona"; args=()
+[2016-11-04 11:50:47] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" LIMIT 2; args=()
+[2016-11-04 11:50:47] INFO [django.server:131] "GET /api/registro/personas/ HTTP/1.1" 200 706
+[2016-11-04 11:51:27] DEBUG [django.db.backends:90] (0.007) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:51:27] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = '7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp'; args=('7gZgaOe2gIQ5X9ggbMNMwHzJHfFnZp',)
+[2016-11-04 11:51:27] DEBUG [django.db.backends:90] (0.001) SELECT "registro_curso"."id", "registro_curso"."nombre", "registro_curso"."horas", "registro_curso"."estado", "registro_curso"."docente_id" FROM "registro_curso"; args=()
+[2016-11-04 11:51:27] INFO [django.server:131] "GET /api/registro/cursos/ HTTP/1.1" 200 106
+[2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.005) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-04 16:53:13.418270' AND "django_session"."session_key" = 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt'); args=('2016-11-04 16:53:13.418270', 'dvxmwuyo8tva24dr4i9dse1a4fqs2azt')
+[2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = 'f12628a577814909b42541c1b71bdcea'; args=('f12628a577814909b42541c1b71bdcea',)
+[2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 11:53:13] DEBUG [django.db.backends:90] (0.001) SELECT "registro_persona"."id", "registro_persona"."nombre", "registro_persona"."apellido_paterno", "registro_persona"."apellido_materno", "registro_persona"."dni", "registro_persona"."telefono", "registro_persona"."sexo", "registro_persona"."email", "registro_persona"."fecha_nacimiento", "registro_persona"."lugar_nacimiento", "registro_persona"."direccion", "registro_persona"."foto" FROM "registro_persona" WHERE "registro_persona"."id" = '87115113555d40458f9ad23577890544'; args=('87115113555d40458f9ad23577890544',)
+[2016-11-04 11:53:13] INFO [django.server:131] "GET /admin/registro/persona/87115113-555d-4045-8f9a-d23577890544/change/ HTTP/1.1" 200 9308
