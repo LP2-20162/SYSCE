@@ -1,17 +1,11 @@
 app
 
-    .factory("registroService", function($resource, configRegistro) {
-    var url = configRegistro.registroUrl;
+    .factory("catalogoService", function($resource, configCatalogo) {
+    var url = configCatalogo.catalogoUrl;
     return {
 
-        Curso: $resource(url + "cursos/:id/", { 'id': '@id' }, {
+        Categoria: $resource(url + "categorias/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
-
-
-        }),
-        Colegio: $resource(url + "colegios/:id/", { 'id': '@id' }, {
-            "update": { method: 'PUT' },
-            
 
         }),
         Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {

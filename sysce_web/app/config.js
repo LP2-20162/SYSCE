@@ -151,6 +151,31 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cursos/form.html"
     }
+},{
+    "registro.registro.colegio": {
+        "url": "/colegio",
+        "data": {
+            "section": "Registro",
+            "page": "Colegio"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/colegios/index.html"
+    },
+    "registro.registro.colegiosNew": {
+        "url": "/colegios/new",
+        "data": {
+            "section": "Registro",
+            "page": "Colegio"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/colegios/form.html"
+    },
+    "registro.registro.colegiosEdit": {
+        "url": "/colegios/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "Colegio"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/colegios/form.html"
+    }
 }, {
     
     "registro.registro.autores": {

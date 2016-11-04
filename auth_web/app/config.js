@@ -3,8 +3,8 @@ var loginUrl = 'http://localhost:9001/auth_web/';
 var iotecaUrl = 'http://localhost:9001/sysce_web/';
 
 
-var clientId = 'E9EGIi8jUNCjj0wzdd86WmBVNC6h0uqUrE0Pl5Na';
-var clientSecret = 'gbT9oRpaU0YEKWCYHMctogvXmUmDblPJgJRm8PfVxB5soG8iqdWoLVjElDJazHHOEbrbnSpaqc6es1YoHQNuPaMPYIvYjL3itv46bDcRsYFdJYxQXLW14x4Qgxoy9TWs';
+var clientId = 'qZydXUIzTsfBe7yAAuuuznoMGzxajXdkBVmfJalz';
+var clientSecret = '75NZxwP6F4H1AipXFSEE3zWgBLi9eAljQmxBv0H5HILewBto5sTiyWWClrNHiNp3h9dQDjxmGaRsFutF2SSA6AA1uFnNAVyDnooL4ssBjljMnuCR0kON2fOnrBsxKuOQ';
 var grantType = 'password';
 
 var config = {

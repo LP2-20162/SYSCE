@@ -11,6 +11,11 @@ app
                 $stateProvider.state(routeName, collection[routeName]);
             }
         });
+        routersStorage.forEach(function(collection) {
+            for (var routeName in collection) {
+                $stateProvider.state(routeName, collection[routeName]);
+            }
+        });
     });
 
 
@@ -37,7 +42,7 @@ app
     .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
 
-        
+
 
         $stateProvider
 

@@ -61,10 +61,8 @@ admin.site.register(Salon, SalonAdmin)
 
 
 class ColegioAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "direccion", "departamento", "provincia", "distrito", "telefono_1",
-                    "telefono_2", "descripcion",)
-    search_fields = ("nombre", "direccion", "departamento", "provincia", "distrito", "telefono_1",
-                     "telefono_2", "descripcion",)
+    list_display = ("nombre", "direccion", "departamento",)
+    search_fields = ("nombre", "direccion", "departamento",)
 
 admin.site.register(Colegio, ColegioAdmin)
 

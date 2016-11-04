@@ -104,7 +104,11 @@ app
                 title: 'Salones',
                 state: 'registro.registro.salon',
                 type: 'link'
-            }, ]
+            }, {
+                title: 'Colegios',
+                state: 'registro.registro.colegio',
+                type: 'link'
+            },]
         }]
     });
 
