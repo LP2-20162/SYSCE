@@ -37,7 +37,13 @@
                                 <th>#</th>
                                 <th class="col-hidden" data-order="nombre">nombre</th>
                                 <th class="col-hidden" data-order="direccion">direccion</th>
-                                <th>departamento</th>
+                                <th>Departamento</th>
+                                <th class="col-hidden" data-order="direccion">provincia</th>
+                                <th class="col-hidden" data-order="direccion">distrito</th>
+                                <th class="col-hidden" data-order="direccion">telefono_1</th>
+                                <th class="col-hidden" data-order="direccion">telefono_2</th>
+                                <th class="col-hidden" data-order="direccion">descripcion</th>
+
                                 <th colspan="2" class="align-options">acciones</th>
                             </tr>
                         </thead>
@@ -47,6 +53,11 @@
                                 <td> {{ d.nombre }} </td>
                                 <td> {{ d.direccion }} </td>
                                 <td> {{ d.departamento }} </td>
+                                <td> {{ d.provincia }} </td>
+                                <td> {{ d.distrito }} </td>
+                                <td> {{ d.telefono_1 }} </td>
+                                <td> {{ d.telefono_2 }} </td>
+                                <td> {{ d.descripcion }} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.colegiosEdit({id:d.id})">
                                         <md-tooltip md-autohide>Editar {{ d.codename }}</md-tooltip>
