@@ -34,7 +34,7 @@ app
     };
 
     $scope.delete = function(d) {
-        if ($window.confirm("Seguro?")) {
+        if ($window.confirm("¿Estas Seguro de eliminar?")) {
             registroService.Persona.delete({ id: d.id }, function(r) {
                 $log.log("Se eliminó Persona:" + JSON.stringify(d));
                 toastr.success('Se eliminó Persona ' + d.nombre, 'Persona');
