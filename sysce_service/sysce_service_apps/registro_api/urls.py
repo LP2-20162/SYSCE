@@ -7,7 +7,7 @@ from .alumno_view import AlumnoViewSet
 from .curso_view import CursoViewSet
 from .colegio_view import ColegioViewSet
 from .cargoescolar_view import CargoEscolarViewSet
-
+from .docente_view import DocenteViewSet
 router = routers.DefaultRouter()
 
 #router.register(r'apoderados', ApoderadoViewSet, 'apoderado-view')
@@ -17,6 +17,7 @@ router.register(r'cursos', CursoViewSet, 'curso-view')
 router.register(r'colegios', ColegioViewSet, 'colegio-view')
 router.register(r'cargosescolares', CargoEscolarViewSet, 'cargoescolar-view')
 
+router.register(r'docente', DocenteViewSet, 'docente-view')
 urlpatterns = [
 
     url(r'^', include(router.urls)),

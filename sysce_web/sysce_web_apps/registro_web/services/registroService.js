@@ -24,6 +24,11 @@ app
             
 
         }),
+        Docente: $resource(url + "docente/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            
+
+        }),
         Persona: $resource(url + "personas/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {

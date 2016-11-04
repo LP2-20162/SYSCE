@@ -120,6 +120,10 @@ app
                 title: 'CargoEscolar',
                 state: 'registro.registro.cargoescolar',
                 type: 'link'
+            }, {
+                title: 'Docente',
+                state: 'registro.registro.docente',
+                type: 'link'
             },]
         }]
     });
