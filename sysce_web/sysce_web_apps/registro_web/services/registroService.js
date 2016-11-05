@@ -3,6 +3,10 @@ app
     .factory("registroService", function($resource, configRegistro) {
     var url = configRegistro.registroUrl;
     return {
+        Salon: $resource(url + "salones/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+
+        }),
 
         Curso: $resource(url + "cursos/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },

@@ -120,7 +120,11 @@ app
                 title: 'CargoEscolar',
                 state: 'registro.registro.cargoescolar',
                 type: 'link'
-            }, {
+            },{
+                title: 'Salones',
+                state: 'registro.registro.salon',
+                type: 'link'
+            },{
                 title: 'Docente',
                 state: 'registro.registro.docente',
                 type: 'link'

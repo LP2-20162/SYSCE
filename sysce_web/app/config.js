@@ -229,7 +229,32 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cursos/form.html"
     }
-}, {
+},  {
+    "registro.registro.salon": {
+        "url": "/salon",
+        "data": {
+            "section": "Registro",
+            "page": "Salones"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/salones/index.html"
+    },
+    "registro.registro.salonesNew": {
+        "url": "/salones/new",
+        "data": {
+            "section": "Registro",
+            "page": "Salones"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/salones/form.html"
+    },
+    "registro.registro.salonesEdit": {
+        "url": "/salones/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "Salones"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/salones/form.html"
+    }
+},{
     "registro.registro.colegio": {
         "url": "/colegio",
         "data": {
