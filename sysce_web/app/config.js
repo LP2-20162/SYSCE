@@ -136,7 +136,7 @@ app.constant('ROUTERS', [{
         "templateUrl": "sysce_web_apps/registro_web/views/personas/index.html"
     },
     "registro.registro.personasNew": {
-        "url": "/personas/new",
+        "url": "//new",
         "data": {
             "section": "Registro",
             "page": "Personas"
@@ -289,7 +289,7 @@ app.constant('ROUTERS', [{
         "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/index.html"
     },
     "registro.registro.cargosescolaresNew": {
-        "url": "//new",
+        "url": "/cargoescolares/new",
         "data": {
             "section": "Registro",
             "page": "CargoEscolar"

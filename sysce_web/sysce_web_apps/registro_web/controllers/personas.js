@@ -36,8 +36,8 @@ app
     $scope.delete = function(d) {
         if ($window.confirm("¿Estas Seguro de eliminar?")) {
             registroService.Persona.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó Persona:" + JSON.stringify(d));
-                toastr.success('Se eliminó Persona ' + d.nombre, 'Persona');
+                $log.log("Se eliminó persona:" + JSON.stringify(d));
+                toastr.success('Se eliminó persona ' + d.nombre, 'Persona');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -71,7 +71,7 @@ app
         if ($scope.persona.id) {
             registroService.Persona.update({ id: $scope.persona.id }, $scope.persona, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó Persona ' + r.nombre, 'Persona');
+                toastr.success('Se editó persona ' + r.nombre, 'Persona');
                 $state.go('registro.registro.personas');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -80,7 +80,7 @@ app
         } else {
             registroService.Persona.save($scope.persona, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó Persona ' + r.nombre, 'Persona');
+                toastr.success('Se insertó persona ' + r.nombre, 'Persona');
                 $state.go('registro.registro.personas');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));

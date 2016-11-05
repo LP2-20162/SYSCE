@@ -34,10 +34,10 @@ app
     };
 
     $scope.delete = function(d) {
-        if ($window.confirm("Seguro?")) {
+        if ($window.confirm("¿Estas Seguro de elimnar a ?"+alumno)) {
             registroService.Alumno.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó Alumno:" + JSON.stringify(d));
-                toastr.success('Se eliminó Alumno ' + d.nombre, 'Alumno');
+                $log.log("Se eliminó alumno:" + JSON.stringify(d));
+                toastr.success('Se eliminó alumno ' + d.nombre, 'Alumno');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -71,7 +71,7 @@ app
         if ($scope.alumno.id) {
             registroService.Alumno.update({ id: $scope.alumno.id }, $scope.alumno, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó Alumno ' + r.nombre, 'Alumno');
+                toastr.success('Se editó alumno ' + r.nombre, 'Alumno');
                 $state.go('registro.registro.alumnos');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -80,7 +80,7 @@ app
         } else {
             registroService.Alumno.save($scope.alumno, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó Alumno ' + r.nombre, 'Alumno');
+                toastr.success('Se insertó alumno ' + r.nombre, 'Alumno');
                 $state.go('registro.registro.alumnos');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
