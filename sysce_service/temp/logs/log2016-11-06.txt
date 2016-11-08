@@ -1,0 +1,3 @@
+[2016-11-06 10:52:24] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-06 10:58:16] [INFO] [sysce_service_apps.auths_api.menu_view:57] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [pantigoso] [GET] !!Writing in log file!!
+[2016-11-06 10:58:16] [INFO] [sysce_service_apps.auths_api.menu_view:57] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [pantigoso] [GET] !!Writing in log file!!
