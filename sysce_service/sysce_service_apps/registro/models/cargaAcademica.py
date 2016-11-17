@@ -5,9 +5,9 @@ from .salon import Salon
 
 class CargaAcademica(models.Model):
 
-    estado = models.BooleanField(default=False)
-    curso = models.ForeignKey('Curso')
     salon = models.ForeignKey('Salon')
+    curso = models.ManyToManyField('Curso')
+    estado = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "CargaAcademica"

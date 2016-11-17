@@ -33,6 +33,11 @@ app
             
 
         }),
+        CargaAcademica: $resource(url + "cargaacademica/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+            
+
+        }),
         Persona: $resource(url + "personas/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {

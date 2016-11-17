@@ -303,6 +303,31 @@ app.constant('ROUTERS', [{
             "page": "CargoEscolar"
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cargoescolar/form.html"
-    }
+      }
+},  {
+    "registro.registro.cargaacademica": {
+        "url": "/cargaacademica",
+        "data": {
+            "section": "Registro",
+            "page": "CargaAcademica"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargaacademica/index.html"
+    },
+    "registro.registro.cargaacademicaNew": {
+        "url": "/cargaacademica/new",
+        "data": {
+            "section": "Registro",
+            "page": "CargaAcademica"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargaacademica/form.html"
+    },
+    "registro.registro.cargaacademicaEdit": {
+        "url": "/cargaacademica/:id/edit",
+        "data": {
+            "section": "Registro",
+            "page": "CargaAcademica"
+        },
+        "templateUrl": "sysce_web_apps/registro_web/views/cargaacademica/form.html"
+    } 
 
 }]);

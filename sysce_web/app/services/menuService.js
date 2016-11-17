@@ -121,6 +121,11 @@ app
                 state: 'registro.registro.cargoescolar',
                 type: 'link'
             },{
+                title: 'Carga Academica',
+                state: 'registro.registro.cargaacademica',
+                type: 'link'
+            }
+            ,{
                 title: 'Docente',
                 state: 'registro.registro.docente',
                 type: 'link'

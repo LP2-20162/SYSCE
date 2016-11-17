@@ -69,8 +69,8 @@ admin.site.register(Colegio, ColegioAdmin)
 
 
 class CargaAcademicaAdmin(admin.ModelAdmin):
-    list_display = ("estado", "curso", "salon",)
-    search_fields = ("estado", "curso", "salon",)
+    list_display = ("salon", "estado",)
+    search_fields = ("salon", "curso", "estado",)
 
 admin.site.register(CargaAcademica, CargaAcademicaAdmin)
 

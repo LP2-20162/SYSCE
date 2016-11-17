@@ -76,6 +76,7 @@
                 console.log("is_superuser=" + userData.is_superuser);
                 console.log(userData);
                 _authentication.email = userData.email;
+                _authentication.userName = userData.username;
                 _authentication.roles = []; //userData.roles;
                 _authentication.firstName = userData.firstName;
                 _authentication.lastName = userData.lastName;

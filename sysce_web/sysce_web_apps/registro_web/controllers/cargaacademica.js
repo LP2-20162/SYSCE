@@ -1,20 +1,20 @@
 app
 // =========================================================================
-// Show View and Delete Salon 
+// Show View and Delete Colegio 
 // =========================================================================
-    .controller("SalonCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
+    .controller("CargaAcademicaCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.fields = 'nombre';
     var params = {};
     $scope.lista = [];
-    $scope.salon = {};
+    $scope.cargaacademica= {};
 
     
     //$window.location = "#" + $location.path();
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        registroService.Salon.query(params, function(r) {
+        registroService.CargaAcademica.query(params, function(r) {
             $scope.lista = r;
             //$scope.options = r.options;
             $scope.isLoading = false;
@@ -38,9 +38,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("¿Estas seguro de eliminar?")) {
-            registroService.Salon.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó el Salon" + JSON.stringify(d));
-                toastr.success('Se eliminó el Salon ' + d.nombre, 'Salon');
+            registroService.CargaAcademica.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó la cargoAcademica:" + JSON.stringify(d));
+                toastr.success('Se eliminó el cargaAcademica ' + d.nombre, 'CargaAcademica');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -52,15 +52,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Salon
+// Create and Update Colegio
 // =========================================================================
-.controller("SalonSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
+.controller("CargaAcademicaSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.salon = {};
+    $scope.cargaacademica = {};
 
     $scope.sel = function() {
-        registroService.Salon.get({ id: $stateParams.id }, function(r) {
-            $scope.Salon = r;
+        registroService.CargaAcademica.get({ id: $stateParams.id }, function(r) {
+            $scope.CargaAcademica = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -71,20 +71,20 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.salon.id) {
-            registroService.Salon.update({ id: $scope.salon.id }, $scope.salon, function(r) {
+        if ($scope.cargaacademica.id) {
+            registroService.CargaAcademica.update({ id: $scope.cargaademica.id }, $scope.cargaacademica, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó el Salon ' + r.nombre, 'Salon');
-                $state.go('registro.registro.salones');
+                toastr.success('Se editó el cargaAcademica ' + r.salon, 'CargaAcademica');
+                $state.go('registro.registro.cargaAcademica');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            registroService.Salon.save($scope.curso, function(r) {
+            registroService.CargaAcademica.save($scope.cargoescolar, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó el Salon ' + r.nombre, 'Salon');
-                $state.go('registro.registro.salones');
+                toastr.success('Se insertó el cargaAcademica ' + r.salon, 'CargaAcademicar');
+                $state.go('registro.registro.cargaAcademica');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -93,6 +93,6 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('registro.registro.salones');
+        $state.go('registro.registro.cargaacademica');
     };
 });

@@ -1,40 +1,42 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <form name="dForm" role="form" ng-controller="PersonaSaveCtrl">
+            <form name="dForm" role="form" ng-controller="CargoEscolarSaveCtrl">
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
-                            <img class="md-user-avatar" src="media/img/list/alumnos.png" />
+                            <img class="md-user-avatar" src="media/img/list/cargo.jpg" />
                         </md-card-avatar>
                         <md-card-header-text>
-                            <span class="md-headline">Alumno</span>
-                            <span class="md-subhead">Registro de alumnos sysce</span>
+                           
+                            <span class="md-headline">Carga Academica</span>
+                            <span class="md-subhead">carga Academica</span>
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Nombre</label>
-                                <input name="nombre" ng-model="persona" required>
-                                <div ng-messages="dForm.nombre.$error">
-                                    <div ng-message="required">This is required.</div>
+                                <label>Salon</label>
+                                <input name="salon" ng-model="cargaacademica.salon" required>
+                                <div ng-messages="dForm.salon.$error">
+                                <div ng-message="required">Este campo es requerido.</div>
                                 </div>
                             </md-input-container>
-                              <md-input-container class="md-block" flex-gt-sm>
-                                <label>CargoEscolar</label>
-                                <input name="cargoEscolar" ng-model="cargoEscolar" required>
-                                <div ng-messages="dForm.nombre.$error">
-                                    <div ng-message="required">This is required.</div>
+                             <md-input-container class="md-block" flex-gt-sm>
+                                <label>Curso</label>
+                                <input name="curso" ng-model="cargaacademica.curso" required>
+                                <div ng-messages="dForm.curso.$error">
+                                <div ng-message="required">Este campo es requerido.</div>
                                 </div>
                             </md-input-container>
-                            
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="alumno.estado" aria-label="estado">
+                              <md-input-container class="md-block">
+                            <md-checkbox ng-model="cargaacademica.estado" aria-label="estado">
                                Estado
                             </md-checkbox>
                         </md-input-container>
+                          
                         </div>
+                        
                     </md-card-content>
                     <md-divider></md-divider>
                     <md-card-actions layout="row" layout-xs="column" layout-align="start center">
@@ -45,8 +47,8 @@
                         </md-card-icon-actions>
                         <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
                         <md-button type="submit" ng-click="save()" class="md-raised md-primary">
-                            <span ng-show="alumno.id == null">Create</span>
-                            <span ng-show="alumno.id">Update</span>
+                            <span ng-show="cargoescolar.id == null">Create</span>
+                            <span ng-show="cargoescolar.id">Update</span>
                         </md-button>
                     </md-card-actions>
                 </md-card>

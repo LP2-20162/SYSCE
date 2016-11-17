@@ -6,6 +6,7 @@ app
     //toastr.success('Consumer sign in successfully', 'Message');
 
     $scope.menu = menuService;
+     $scope.user = authService.authentication;
     $scope.app = {
         name: 'Grupo Sysce',
         version: '1.0.1',
