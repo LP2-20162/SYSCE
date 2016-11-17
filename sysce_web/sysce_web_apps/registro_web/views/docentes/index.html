@@ -39,6 +39,7 @@
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>Id</th>
+                                
                                 <th class="col-hidden" data-order="persona">nombre</th>
                                 <th colspan="2" class="align-options" data-order="especialidad">Especialidad</th>
                                 <th class="col-hidden" data-order="estado">estado</th>                        
@@ -47,8 +48,9 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="d in lista">
-                                <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
-                                <td> {{ d.persona }} </td>                                
+                                <td> {{ $index + 1 }} </td>
+
+                                <td> {{ d.persona_nombre }} </td>                                
                                 <td> {{ d.especialidad }} </td>
                                 <td> {{ d.estado }} </td>
                              

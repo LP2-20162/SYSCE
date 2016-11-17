@@ -16,7 +16,7 @@ class Alumno(models.Model):
     estado = models.BooleanField(default=False)
     persona = models.ForeignKey('Persona')
     cargoEscolar = models.ForeignKey('CargoEscolar')
-    cargaAcademica = models.ForeignKey('CargaAcademica')
+    cargaAcademica = models.ManyToManyField('CargaAcademica')
     colegio = models.ForeignKey('Colegio')
 
     class Meta:

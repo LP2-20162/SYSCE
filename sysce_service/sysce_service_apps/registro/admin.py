@@ -22,8 +22,8 @@ admin.site.register(Persona, PersonaAdmin)
 
 
 class DocenteAdmin(admin.ModelAdmin):
-    list_display = ("especialidad", "estado", "persona",)
-    search_fields = ("especialidad", "estado", "persona",)
+    list_display = ("id", "especialidad", "estado", "persona",)
+    search_fields = ("id", "especialidad", "estado", "persona",)
 
 admin.site.register(Docente, DocenteAdmin)
 
@@ -36,8 +36,7 @@ admin.site.register(Apoderado, ApoderadoteAdmin)
 
 
 class AlumnoAdmin(admin.ModelAdmin):
-    list_display = ("estado", "persona", "cargoEscolar",
-                    "cargaAcademica", "colegio",)
+    list_display = ("estado", "persona", "colegio",)
     search_fields = ("estado", "persona", "cargoEscolar",
                      "cargaAcademica", "colegio",)
 
