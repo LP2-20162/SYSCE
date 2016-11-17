@@ -8,13 +8,13 @@
                     </md-card-avatar>
                     <md-card-header-text>
                         <span class="md-headline">Cursos</span>
-                        <span class="md-subhead">Trabajar con Cursos</span>
+                        <span class="md-subhead">Lista de Cursos</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
                             <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.cursosNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <md-tooltip md-autohide>Insertar</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                             <md-card-icon-actions>
@@ -34,11 +34,11 @@
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th class="col-hidden" data-order="horas">horas</th>
-                                <th>estado</th>
-                                <th colspan="2" class="align-options">acciones</th>
+                                <th>Id</th>
+                                <th class="col-hidden" data-order="nombre">Nombre</th>
+                                <th class="col-hidden" data-order="horas">Horas</th>
+                                <th>Estado</th>
+                                <th colspan="2" class="align-options">Modificar</th>
                             </tr>
                         </thead>
                         <tbody>

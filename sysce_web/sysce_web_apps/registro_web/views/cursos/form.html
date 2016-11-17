@@ -5,12 +5,12 @@
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
-                            <img class="md-user-avatar" src="media/img/list/cursos.jpg />
+                            <img class="md-user-avatar" src="media/img/list/cursos.jpg" />
                         </md-card-avatar>
                         <md-card-header-text>
                            
                             <span class="md-headline">Cursos</span>
-                            <span class="md-subhead">Trabajar con cursos</span>
+                            <span class="md-subhead">Lista de cursos</span>
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
@@ -19,18 +19,18 @@
                                 <label>Nombre</label>
                                 <input name="nombre" ng-model="curso.nombre" required>
                                 <div ng-messages="dForm.nombre.$error">
-                                <div ng-message="required">This is required.</div>
+                                <div ng-message="required">Este campo es requerido.</div>
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>horas</label>
+                                <label>Horas</label>
                                 <input name="horas" ng-model="curso.horas" required>
                              
                             </md-input-container>
                         </div>
                         <md-input-container class="md-block">
                             <md-checkbox ng-model="curso.estado" aria-label="estado">
-                                estado
+                                Estado
                             </md-checkbox>
                         </md-input-container>
                     </md-card-content>
@@ -41,10 +41,10 @@
                                 <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
                             </md-button>
                         </md-card-icon-actions>
-                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
                         <md-button type="submit" ng-click="save()" class="md-raised md-primary">
-                            <span ng-show="curso.id == null">Create</span>
-                            <span ng-show="curso.id">Update</span>
+                            <span ng-show="curso.id == null">Crear</span>
+                            <span ng-show="curso.id">Modificar</span>
                         </md-button>
                     </md-card-actions>
                 </md-card>

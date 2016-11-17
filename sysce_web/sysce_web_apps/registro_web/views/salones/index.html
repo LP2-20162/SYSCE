@@ -8,13 +8,13 @@
                     </md-card-avatar>
                     <md-card-header-text>
                         <span class="md-headline">Salones</span>
-                        <span class="md-subhead">Cruds Salones</span>
+                        <span class="md-subhead">Lista de salones</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
                             <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.salonesNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <md-tooltip md-autohide>Insertar</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                             <md-card-icon-actions>
@@ -34,7 +34,7 @@
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
+                                <th>Id</th>
                                 <th class="col-hidden" data-order="nombre">Nombre</th>
                                 <th class="col-hidden" data-order="ubicacion">Ubicacion</th>
                               
