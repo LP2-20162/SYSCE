@@ -1103,7 +1103,8 @@ html[dir='rtl'] #notification-container {
 }
 
 #page-list {
-  /* fill the apps-frame */
+  /* fill the apps-frame ,, Aqui esta el fonde de la pagina*/ 
+  background-color: #9E9E9E;
   display: -webkit-box;
   height: 100%;
 }
@@ -1148,6 +1149,7 @@ html[dir='rtl'] #attribution {
 }
 
 #footer-content {
+  background-color: #424242; 
   -webkit-align-items: center;
   -webkit-justify-content: space-between;
   display: -webkit-flex;
@@ -11786,7 +11788,7 @@ var toCssPx = cr.ui.toCssPx;
 
   <div id="footer">
     <div id="footer-border"></div>
-    <div id="footer-content">
+    <div id="footer-content"> <!-- Esta comentado por que no se esta usando 
       <div id="logo-img">
         <img alt="" src="chrome://theme/IDR_PRODUCT_LOGO">
         <div id="promo-bubble-anchor"></div>
@@ -11806,7 +11808,7 @@ var toCssPx = cr.ui.toCssPx;
         <span class="lid"></span>
         <span class="can"></span>
         <span class="trash-text" i18n-content="appuninstall"></span>
-      </div>
+      </div>-->
     </div>
   </div>
 
@@ -12259,6 +12261,7 @@ i18nTemplate.process(document, loadTimeData);
 
     
         <h2 class="md-headline" style="margin-top: 0;">Sistema de control de asistencia Grupo Sysce</h2>
+      
         <ul class="buckets" layout layout-align="center center" layout-wrap>
             <li flex="10" flex-md="25" flex-sm="50" flex-xs="50" ng-repeat="(index, link) in [
         { href: 'app', icon: 'school', text: 'Inicio' },
