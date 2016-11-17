@@ -14,7 +14,7 @@
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
                             <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.cargosescolaresNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <md-tooltip md-autohide>Insertar</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                             <md-card-icon-actions>
@@ -34,11 +34,12 @@
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th class="col-hidden" data-order="direccion">tipo</th>
+                                <th>Id</th>
+                                <th class="col-hidden" data-order="nombre">Nombre</th>
+                                <th class="col-hidden" data-order="direccion">Tipo</th>
                                 
-                                <th colspan="2" class="align-options">acciones</th>
+                                <th colspan="2" class="align-options">Modificar</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -54,6 +55,7 @@
                                     </md-button>
                                 </td>
                                 <td>
+                                    
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
                                         <md-tooltip md-autohide>Eliminar {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
