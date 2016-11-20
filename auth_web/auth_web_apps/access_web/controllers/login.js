@@ -13,7 +13,7 @@
 
     $scope.login = function() {
         loginService.login($scope.user).then(function(response) {
-                toastr.success('message', 'Login success');
+                toastr.success('Welcome to Sysce', 'Login success');
                 //$location.path('/orders');
                 $window.location = config.iotecaUrl;
             },
