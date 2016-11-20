@@ -10,20 +10,22 @@ from .models.cargoEscolar import CargoEscolar
 from .models.cargaAcademica import CargaAcademica
 from .models.asistencia import Asistencia
 from .models.actividadEscolar import ActividadEscolar
-from .models.actividadColegio import ActividadColegio
+
 # Register your models here.
 
 
 class PersonaAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "apellido_paterno", "apellido_materno", )
-    search_fields = ("nombre", "apellido_paterno",)
+    list_display = ("nombre", "apellido_paterno", "apellido_materno",
+                    "dni", "telefono", "email", "fecha_nacimiento", "lugar_nacimiento",)
+    search_fields = ("nombre", "apellido_paterno", "apellido_materno", "dni", "telefono",
+                     "email", "fecha_nacimiento", "lugar_nacimiento",)
 
 admin.site.register(Persona, PersonaAdmin)
 
 
 class DocenteAdmin(admin.ModelAdmin):
-    list_display = ("id", "especialidad", "estado", "persona",)
-    search_fields = ("id", "especialidad", "estado", "persona",)
+    list_display = ("id", "persona", "especialidad", "estado", )
+    search_fields = ("id", "persona", "especialidad", "estado", "persona",)
 
 admin.site.register(Docente, DocenteAdmin)
 
@@ -36,34 +38,35 @@ admin.site.register(Apoderado, ApoderadoteAdmin)
 
 
 class AlumnoAdmin(admin.ModelAdmin):
-    list_display = ("estado", "persona", "colegio",)
-    search_fields = ("estado", "persona", "cargoEscolar",
-                     "cargaAcademica", "colegio",)
+    list_display = ("persona", "cargaAcademica",
+                    "cargoEscolar", "estado",  "colegio",)
+    search_fields = ("persona", "cargaAcademica", "cargoEscolar", "estado",
+                     "colegio",)
 
 admin.site.register(Alumno, AlumnoAdmin)
 
 
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "horas", "estado",
-                    "docente",)
-    search_fields = ("docente", "horas", "estado",
-                     "docente",)
+    list_display = ("curso", "docente", "horas", "estado",
+                    )
+    search_fields = ("curso", "docente", "horas", "estado",
+                     )
 
 admin.site.register(Curso, CursoAdmin)
 
 
 class SalonAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "ubicacion",)
-    search_fields = ("nombre", "ubicacion",)
+    list_display = ("nivel", "grado", "seccion", "ubicacion",)
+    search_fields = ("nivel", "grado", "seccion", "ubicacion",)
 
 admin.site.register(Salon, SalonAdmin)
 
 
 class ColegioAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "direccion", "departamento", "provincia", "distrito", "telefono_1",
-                    "telefono_2", "descripcion",)
-    search_fields = ("nombre", "direccion", "departamento", "provincia", "distrito", "telefono_1",
-                     "telefono_2", "descripcion",)
+    list_display = ("nombre", "direccion", "departamento", "provincia", "distrito",
+                    "telefono", "descripcion",)
+    search_fields = ("nombre", "direccion", "departamento", "provincia", "distrito",
+                     "telefono", "descripcion")
 
 admin.site.register(Colegio, ColegioAdmin)
 
@@ -76,8 +79,8 @@ admin.site.register(CargaAcademica, CargaAcademicaAdmin)
 
 
 class AsistenciaAdmin(admin.ModelAdmin):
-    list_display = ("alumno", "fecha", "hora", "curso", "asiste",)
-    search_fields = ("alumno", "fecha", "hora", "curso", "asiste", )
+    list_display = ("alumno", "fecha", "hora", "curso", "asistio",)
+    search_fields = ("alumno", "fecha", "hora", "curso", "asistio", )
 
 admin.site.register(Asistencia, AsistenciaAdmin)
 
@@ -89,19 +92,10 @@ class CargoEscolarAdmin(admin.ModelAdmin):
 admin.site.register(CargoEscolar, CargoEscolarAdmin)
 
 
-class ActividadColegioAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "descripcion", "fecha_emicion",
-                    "fecha_actividad", "estado", )
-    search_fields = ("nombre", "descripcion", "fecha_emicion",
-                     "fecha_actividad", "estado",)
-
-admin.site.register(ActividadColegio, ActividadColegioAdmin)
-
-
 class ActividadEscolarAdmin(admin.ModelAdmin):
-    list_display = ("curso", "nombre", "descripcion", "fecha_emicion",
-                    "fecha_actividad", "estado", )
-    search_fields = ("curso", "nombre", "descripcion", "fecha_emicion",
-                     "fecha_actividad", "estado",)
+    list_display = ("actividad", "descripcion", "fecha_emicion",
+                    "fecha_actividad", "hora_activdad", "estado", )
+    search_fields = ("actividad", "descripcion", "fecha_emicion",
+                     "fecha_actividad", "hora_activdad", "estado",)
 
 admin.site.register(ActividadEscolar, ActividadEscolarAdmin)

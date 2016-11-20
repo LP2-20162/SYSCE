@@ -13,11 +13,11 @@ class Alumno(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
 
-    estado = models.BooleanField(default=False)
     persona = models.ForeignKey('Persona')
     cargoEscolar = models.ForeignKey('CargoEscolar')
-    cargaAcademica = models.ManyToManyField('CargaAcademica')
+    cargaAcademica = models.ForeignKey('CargaAcademica')
     colegio = models.ForeignKey('Colegio')
+    estado = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Alumno"

@@ -4,7 +4,6 @@ from .docente import *
 from .apoderado import *
 from .salon import *
 from .asistencia import *
-from .actividadColegio import *
 from .actividadEscolar import *
 from .cargoEscolar import *
 from .cargaAcademica import *

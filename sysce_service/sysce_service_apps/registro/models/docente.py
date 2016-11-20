@@ -7,10 +7,9 @@ from .persona import Persona
 class Docente(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-
+    persona = models.ForeignKey('Persona')
     especialidad = models.CharField(max_length=60, blank=True, null=True)
     estado = models.BooleanField(default=False)
-    persona = models.ForeignKey('Persona')
 
     class Meta:
         verbose_name = "Docente"
