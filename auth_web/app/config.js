@@ -1,6 +1,6 @@
 ﻿var baseUrl = 'http://localhost:9000/';
 var loginUrl = 'http://localhost:9001/auth_web/';
-var iotecaUrl = 'http://localhost:9001/sysce_web/';
+var sysceUrl = 'http://localhost:9001/sysce_web/';
 
 
 var clientId = 'Mdo9MDmslKUAht2JQHpzxdgWGhYD3ZmYYSwEtHm6';
@@ -11,7 +11,7 @@ var config = {
 
     baseUrl: baseUrl,
     loginUrl: loginUrl,
-    iotecaUrl: iotecaUrl,
+    sysceUrl: sysceUrl,
 
     clientId: clientId,
     clientSecret: clientSecret,

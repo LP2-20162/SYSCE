@@ -15,7 +15,7 @@
         loginService.login($scope.user).then(function(response) {
                 toastr.success('Welcome to Sysce', 'Login success');
                 //$location.path('/orders');
-                $window.location = config.iotecaUrl;
+                $window.location = config.sysceUrl;
             },
             function(err) {
                 $scope.message = JSON.stringify(err);
