@@ -37,14 +37,13 @@
                                 <th>#</th>
                                 <th class="col-hidden" data-order="nombre">nombre</th>
                                 <th class="col-hidden" data-order="direccion">direccion</th>
-                                <th>Departamento</th>
-                                <th class="col-hidden" data-order="direccion">provincia</th>
-                                <th class="col-hidden" data-order="direccion">distrito</th>
-                                <th class="col-hidden" data-order="direccion">telefono_1</th>
-                                <th class="col-hidden" data-order="direccion">telefono_2</th>
-                                <th class="col-hidden" data-order="direccion">descripcion</th>
+                                <th class="col-hidden" data-order="departamento">Departamento</th>
+                                <th class="col-hidden" data-order="provincia">provincia</th>
+                                <th class="col-hidden" data-order="distrito">distrito</th>
+                                <th class="col-hidden" data-order="telefono">telefono</th>
+                                <th class="col-hidden" data-order="descripcion">descripcion</th>
 
-                                <th colspan="2" class="align-options">acciones</th>
+                                <th colspan="2" class="align-options">Modificar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,8 +54,7 @@
                                 <td> {{ d.departamento }} </td>
                                 <td> {{ d.provincia }} </td>
                                 <td> {{ d.distrito }} </td>
-                                <td> {{ d.telefono_1 }} </td>
-                                <td> {{ d.telefono_2 }} </td>
+                                <td> {{ d.telefono }} </td>
                                 <td> {{ d.descripcion }} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.colegiosEdit({id:d.id})">

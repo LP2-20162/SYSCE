@@ -35,7 +35,11 @@
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>Id</th>
-                                <th class="col-hidden" data-order="nombre">Nombre</th>
+                                <th class="col-hidden" data-order="nivel">Nivel</th>
+
+                                <th class="col-hidden" data-order="grado">Grado</th>
+
+                                <th class="col-hidden" data-order="seccion">Seccion</th>
                                 <th class="col-hidden" data-order="ubicacion">Ubicacion</th>
                               
                             </tr>
@@ -43,7 +47,9 @@
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ $index + 1 }} </td>
-                                <td> {{ d.nombre }} </td>
+                                <td> {{ d.nivel }} </td>
+                                <td> {{ d.grado }} </td>                               
+                                <td> {{ d.seccion }} </td>
                                 <td> {{ d.ubicacion }} </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.salonesEdit({id:d.id})">

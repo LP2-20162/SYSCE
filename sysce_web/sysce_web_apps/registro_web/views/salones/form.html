@@ -16,9 +16,23 @@
                     <md-card-content>
                         <div layout-gt-sm="row">
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Nombre</label>
-                                <input name="nombre" ng-model="salon.nombre" required>
-                                <div ng-messages="dForm.nombre.$error">
+                                <label>Nivel</label>
+                                <input name="nivel" ng-model="salon.nivel" required>
+                                <div ng-messages="dForm.nivel.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Grado</label>
+                                <input name="grado" ng-model="salon.grado" required>
+                                <div ng-messages="dForm.grado.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Seccion</label>
+                                <input name="seccion" ng-model="salon.seccion" required>
+                                <div ng-messages="dForm.seccion.$error">
                                 <div ng-message="required">This is required.</div>
                                 </div>
                             </md-input-container>
