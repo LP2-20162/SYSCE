@@ -7,8 +7,8 @@
                         <img class="md-user-avatar" src="media/img/list/60.jpg" />
                     </md-card-avatar>
                     <md-card-header-text>
-                        <span class="md-headline">Personas</span>
-                        <span class="md-subhead">Lista de personas registradas</span>
+                        <span class="md-headline">Registro Persona</span>
+                        <span class="md-subhead">Ultimos registros</span>
                    </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
@@ -64,14 +64,14 @@
                                
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.personasEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Editar {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Editar {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
                                      
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Eliminar {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Eliminar {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
                              <md-button class="md-fab md-mini md-primary" aria-label="Use Facebook">
