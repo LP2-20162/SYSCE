@@ -39,8 +39,8 @@ app
     $scope.delete = function(d) {
         if ($window.confirm("¿Estas seguro de eliminar?")) {
             registroService.Salon.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó el Salon" + JSON.stringify(d));
-                toastr.success('Se eliminó el Salon ' + d.nombre, 'Salon');
+                $log.log("Se eliminó correctamente" + JSON.stringify(d));
+                toastr.success('Se eliminó el Salon ' + d.nivel+d.grado+d.seccion, 'Salon');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -74,16 +74,16 @@ app
         if ($scope.salon.id) {
             registroService.Salon.update({ id: $scope.salon.id }, $scope.salon, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó el Salon ' + r.nombre, 'Salon');
+                toastr.success('Se editó el Salon ' + r.nivel+ r.grado+ r.seccion, 'Salon');
                 $state.go('registro.registro.salones');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            registroService.Salon.save($scope.curso, function(r) {
+            registroService.Salon.save($scope.salon, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó el Salon ' + r.nombre, 'Salon');
+                toastr.success('Se agrego Nivel :' + r.nivel+ 'Grado : '+r.grado+ 'Seccion : '+r.seccion, 'Correctamente');
                 $state.go('registro.registro.salones');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
