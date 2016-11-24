@@ -103,3 +103,26 @@
 [2016-11-24 10:56:09] DEBUG [django.db.backends:90] (0.002) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = '83a756b961f04f51adfcb0c7b8dd7277' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('83a756b961f04f51adfcb0c7b8dd7277',)
 [2016-11-24 10:56:09] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 382
 [2016-11-24 10:56:09] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-24 11:34:19] DEBUG [django.db.backends:90] (0.027) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-24 11:34:19] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-24 11:34:30] DEBUG [django.db.backends:90] (0.021) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:34:30] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:34:39] DEBUG [django.db.backends:90] (0.005) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:34:39] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:36:00] DEBUG [django.db.backends:90] (0.006) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:36:00] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:41:31] WARNING [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 401 58
+[2016-11-24 11:41:31] WARNING [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 401 58
+[2016-11-24 11:41:40] DEBUG [django.db.backends:90] (0.004) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:41:40] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:41:47] DEBUG [django.db.backends:90] (0.006) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:41:47] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:42:27] WARNING [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 401 58
+[2016-11-24 11:42:27] WARNING [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 401 58
+[2016-11-24 11:42:33] DEBUG [django.db.backends:90] (0.005) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:42:33] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-24 11:42:50] DEBUG [django.db.backends:90] (0.004) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-24 11:42:50] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
