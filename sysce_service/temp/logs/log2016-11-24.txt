@@ -1,1 +1,4 @@
 [2016-11-24 10:56:09] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [william] [GET] User is authenticated
+[2016-11-24 13:58:21] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-24 13:59:23] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [pantigoso] [GET] User is authenticated
+[2016-11-24 13:59:52] [INFO] [sysce_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [yapo] [GET] User is authenticated
