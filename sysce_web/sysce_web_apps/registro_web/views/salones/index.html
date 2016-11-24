@@ -28,10 +28,10 @@
                         </md-card-actions>
                         
                 <md-card-content>
-                    
+                      <md-progress-circular md-mode="indeterminate" ng-show="isLoading"></md-progress-circular>
+  
                     <table table-responsive>
                         
-                        <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>Id</th>
@@ -51,20 +51,27 @@
                                 <td> {{ d.grado }} </td>                               
                                 <td> {{ d.seccion }} </td>
                                 <td> {{ d.ubicacion }} </td>
+                                
+                                    
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.salonesEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Editar {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Editar {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                 </td>
                                 <td>
+                                     
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Eliminar {{ d.codename }}</md-tooltip>
+                                        <md-tooltip md-autohide>Eliminar {{ d.nombre }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
+                             <md-button class="md-fab md-mini md-primary" aria-label="Use mail">
+                <ng-md-icon icon="mail" aria-label="title" style="color: greenwhile;"></ng-md-icon>
+            </md-button>
                                 </td>
                             </tr>
                         </tbody>
+                        
                     </table>
 
 
@@ -72,15 +79,9 @@
 
                     </md-table-container>
                     <md-table-pagination>
-                        <table>
-                            <tfoot>
-                                <tr>
-                                    <td>
+                        
                                         <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                                    
                     </md-table-pagination>
                 </md-card-content>
             </md-card>

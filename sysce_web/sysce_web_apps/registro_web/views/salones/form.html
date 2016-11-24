@@ -19,30 +19,33 @@
                                 <label>Nivel</label>
                                 <input name="nivel" ng-model="salon.nivel" required>
                                 <div ng-messages="dForm.nivel.$error">
-                                <div ng-message="required">This is required.</div>
+                                <div ng-message="required">Este campo es Obligatorio.</div>
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Grado</label>
                                 <input name="grado" ng-model="salon.grado" required>
                                 <div ng-messages="dForm.grado.$error">
-                                <div ng-message="required">This is required.</div>
+                                <div ng-message="required">Este campo es Obligatorio.</div>
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Seccion</label>
                                 <input name="seccion" ng-model="salon.seccion" required>
                                 <div ng-messages="dForm.seccion.$error">
-                                <div ng-message="required">This is required.</div>
+                                <div ng-message="required">Este campo es Obligatorio.</div>
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Ubicacion</label>
                                 <input name="ubicacion" ng-model="salon.ubicacion" required>
+                                <div ng-messages="dForm.ubicacion.$error">
+                                  <div ng-message="required">Este campo es Obligatorio.</div>
                              
                             </md-input-container>
                         </div>
                    
+                    <md-divider></md-divider>
                     <md-divider></md-divider>
                     <md-card-actions layout="row" layout-xs="column" layout-align="start center">
                         <md-card-icon-actions>
@@ -50,10 +53,10 @@
                                 <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
                             </md-button>
                         </md-card-icon-actions>
-                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
                         <md-button type="submit" ng-click="save()" class="md-raised md-primary">
-                            <span ng-show="salon.id == null">Crear</span>
-                            <span ng-show="salon.id">Modificar</span>
+                            <span ng-show="salon.id == null">Crear </span>
+                            <span ng-show="salon.id">Modificar </span>
                         </md-button>
                     </md-card-actions>
                 </md-card>
