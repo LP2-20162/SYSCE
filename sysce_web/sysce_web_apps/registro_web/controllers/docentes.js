@@ -57,11 +57,18 @@ app
     $scope.persona =[];
   
   //Comienza Controller para Autocomplet
+
+  $scope.getData = function(){
+    registroService.Persona.query(function(r){
+        $scope.persona =r;
+
+    });
+  };
+
+  $scope.getData();
   
-
-
   $scope.buscarPersona =function(q){
-    return registroService.Persona.query({query:q},function(r){
+    return registroService.Docente.query({query:q},function(r){
         return r;
     });
   };
