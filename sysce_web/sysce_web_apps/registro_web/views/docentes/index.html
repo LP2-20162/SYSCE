@@ -40,7 +40,7 @@
                             <tr>
                                 <th>Id</th>
                                 
-                                <th class="col-hidden" data-order="persona">Docente</th>
+                                <th class="col-hidden" data-order="ndocente">Docente</th>
                                 <th colspan="2" class="align-options" data-order="especialidad">Especialidad</th>
                                 <th class="col-hidden" data-order="estado">Estado</th>                        
                      
@@ -50,14 +50,14 @@
                             <tr ng-repeat="d in lista">
                                 <td> {{ $index + 1 }} </td>
 
-                                <td> {{ d.persona_nombre }} </td>                                
+                                <td> {{ d.ndocente }} </td>                                
                                 <td> {{ d.especialidad }} </td>
                                 <td> {{ d.estado }} </td>
                              
                                 <td>
 
                                     <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="registro.registro.docentesEdit({id:d.id})">
-                                        <md-tooltip md-autohide>Editar {{ d.nombre }}</md-tooltip>
+                                        <md-tooltip md-autohide>Editar {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
                                     </md-button>
                                     <md-button class="md-fab md-mini md-primary" aria-label="Use mail">
@@ -65,7 +65,7 @@
                                 </td>
                                 <td>
                                     <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
-                                        <md-tooltip md-autohide>Elimnar {{ d.nombre }}</md-tooltip>
+                                        <md-tooltip md-autohide>Elimnar {{ d.codename }}</md-tooltip>
                                         <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
                                     </md-button>
                                 </td>

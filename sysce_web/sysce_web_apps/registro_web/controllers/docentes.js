@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("DocenteCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'codename';
     var params = {};
     $scope.lista = [];
     $scope.docente = {};
@@ -54,6 +54,25 @@ app
 .controller("DocenteSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.docente = {};
+    $scope.persona =[];
+  
+  //Comienza Controller para Autocomplet
+  
+
+
+  $scope.buscarPersona =function(q){
+    return registroService.Persona.query({query:q},function(r){
+        return r;
+    });
+  };
+  
+  $scope.selectPersona = function(item){
+     $scope.docente.docente = item.id ;
+
+  };
+
+  //Aqui termina autocomplet
+
 
     $scope.sel = function() {
         registroService.Docente.get({ id: $stateParams.id }, function(r) {
@@ -71,7 +90,7 @@ app
         if ($scope.docente.id) {
             registroService.Docente.update({ id: $scope.docente.id }, $scope.docente, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó Docente ' + r.nombre, 'Docente');
+                toastr.success('Se editó docente ' + r.docente, 'Docente');
                 $state.go('registro.registro.docentes');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
@@ -80,7 +99,7 @@ app
         } else {
             registroService.Docente.save($scope.docente, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó docente ' + r.nombre, 'Docente');
+                toastr.success('Se insertó docente ' + r.docente, 'Docente');
                 $state.go('registro.registro.docentes');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));

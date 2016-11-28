@@ -1,7 +1,7 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <form name="dForm" role="form" ng-controller="PersonaSaveCtrl">
+            <form name="dForm" role="form" ng-controller="DocenteSaveCtrl">
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
@@ -14,33 +14,25 @@
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
+                            
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Nombre</label>
-                                <input name="nombre" ng-model="docente.personax" required>
-                                <div ng-messages="dForm.nombre.$error">
-                                    <div ng-message="required">This is required.</div>
-                                </div>
-                            </md-input-container>
-                            <md-input-container class="md-block" flex-gt-sm>
-                                    <label>Contenttype</label>
+                                    <label>Docente</label>
                                     <md-autocomplete
-                                        md-search-text="content_type"
-                                        md-search-text-change="cleanId(content_type,1)"
-                                        md-selected-item-change="selId(item.id)"
-                                        md-items="item in searchContentType(content_type)" 
-                                        md-item-text="item.app_label+' ['+item.model+']'"
-                                        md-input-name="content_type"
-                                        md-autoselect="true"
-                                        md-min-length="0"
+                                        md-search-text="q"
+                                        md-item-text="item.docente"
+                                        md-selected-item-change="selectPersona(item)"
+                                        md-items="item in buscarPersona(q)" 
+                                        md-min-length="1"
+                                        placeholder="Busque persona"
                                         >
                                         <md-item-template>
-                                            <span md-highlight-text="item.content_type_id" md-highlight-flags="^i">
-                                                {{item.app_label}}   [{{item.model}}]  </span>
+                    <span md-highlight-text="q" md-highlight-flags="^i">
+                                                {{item.docente}} </span>
 
                                         </md-item-template>
                                         <md-not-found>
-                                            <a href="#">Registrar nuevo</a>
-                                        </md-not-found>
+                                         No se encontro : " {{q}} "  con este estado.
+                                         </md-not-found>
                                     </md-autocomplete>
                     </md-input-container>
 
@@ -48,7 +40,7 @@
                                 <label>Especialidad</label>
                                 <input name="especialidad" ng-model="docente.especialidad" required>
                                 <div ng-messages="dForm.especialidad.$error">
-                                <div ng-message="required">This is required.</div>
+                                <div ng-message="required">Este campo es requerido</div>
                                 </div>
                             </md-input-container>
                             

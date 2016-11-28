@@ -55,6 +55,7 @@ app
     //Valores iniciales
     $scope.persona = {};
 
+
     $scope.sel = function() {
         registroService.Persona.get({ id: $stateParams.id }, function(r) {
             $scope.persona = r;

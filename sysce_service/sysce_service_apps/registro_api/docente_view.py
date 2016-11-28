@@ -4,7 +4,7 @@ from sysce_service_apps.registro.models.docente import Docente
 
 class DocenteSerializer(serializers.ModelSerializer):
 
-    persona_nombre = serializers.ReadOnlyField(
+    ndocente = serializers.ReadOnlyField(
         source='persona.nombre')
 
     class Meta:
