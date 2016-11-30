@@ -15,9 +15,9 @@ from .models.actividadEscolar import ActividadEscolar
 
 
 class PersonaAdmin(admin.ModelAdmin):
-    list_display = ("nombre", "apellido_paterno", "apellido_materno",
+    list_display = ("id", "nombre", "apellido_paterno", "apellido_materno",
                     "dni", "telefono", "email", "fecha_nacimiento", "lugar_nacimiento",)
-    search_fields = ("nombre", "apellido_paterno", "apellido_materno", "dni", "telefono",
+    search_fields = ("id", "nombre", "apellido_paterno", "apellido_materno", "dni", "telefono",
                      "email", "fecha_nacimiento", "lugar_nacimiento",)
 
 admin.site.register(Persona, PersonaAdmin)

@@ -16,22 +16,18 @@
                         <div layout-gt-sm="row">
                             
                             <md-input-container class="md-block" flex-gt-sm>
-                                    <label>Docente</label>
+                                    <label>Nombre</label>
                                     <md-autocomplete
                                         md-search-text="q"
-                                        md-item-text="item.docente"
+                                        md-item-text="item.persona.nombre"
                                         md-selected-item-change="selectPersona(item)"
                                         md-items="item in buscarPersona(q)" 
                                         md-min-length="1"
-                                        placeholder="Busque persona"
-                                        >
-                                        <md-item-template>
-                    <span md-highlight-text="q" md-highlight-flags="^i">
-                                                {{item.docente}} </span>
-
+                                        placeholder="Busque persona">
+                <md-item-template><span md-highlight-text="q" md-highlight-flags="^i">{{item.persona.nombre}} </span>
                                         </md-item-template>
                                         <md-not-found>
-                                         No se encontro : " {{q}} "  con este estado.
+                                         No existe el nombre  : " {{q}} " 
                                          </md-not-found>
                                     </md-autocomplete>
                     </md-input-container>

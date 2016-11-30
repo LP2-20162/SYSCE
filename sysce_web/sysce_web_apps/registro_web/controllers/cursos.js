@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("CursoCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'codename';
     var params = {};
     $scope.lista = [];
     $scope.curso = {};
