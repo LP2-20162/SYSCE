@@ -1,7 +1,7 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <form name="dForm" role="form" ng-controller="CargoEscolarSaveCtrl">
+            <form name="dForm" role="form" ng-controller="CargaAcademicaSaveCtrl">
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
@@ -15,20 +15,20 @@
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
-                            <md-input-container class="md-block" flex-gt-sm>
-                                <label>Salon</label>
-                                <input name="salon" ng-model="cargaacademica.salon" required>
-                                <div ng-messages="dForm.salon.$error">
-                                <div ng-message="required">Este campo es requerido.</div>
-                                </div>
+                            <label>Salon</label>
+                                <md-select ng-model="cargaacademica.salon" required>
+                                    <md-option ng-repeat="c in salones" ng-value="c.id">{{c.nivel}}</md-option>
+                                </md-select>
                             </md-input-container>
-                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Curso</label>
-                                <input name="curso" ng-model="cargaacademica.curso" required>
-                                <div ng-messages="dForm.curso.$error">
-                                <div ng-message="required">Este campo es requerido.</div>
-                                </div>
+                        </div>
+                        <div layout-gt-sm="row">
+                            <label>Curso</label>
+                                <md-select ng-model="cargaacademica.curso" required>
+                                    <md-option ng-repeat="c in cursos" ng-value="c.id">{{c.curso}}</md-option>
+                                </md-select>
                             </md-input-container>
+                            </div>
+                        <div layout-gt-sm="row">
                               <md-input-container class="md-block">
                             <md-checkbox ng-model="cargaacademica.estado" aria-label="estado">
                                Estado

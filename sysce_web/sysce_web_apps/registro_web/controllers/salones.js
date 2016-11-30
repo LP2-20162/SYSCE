@@ -60,7 +60,7 @@ app
 
     $scope.sel = function() {
         registroService.Salon.get({ id: $stateParams.id }, function(r) {
-            $scope.Salon = r;
+            $scope.salon = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);

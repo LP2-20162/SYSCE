@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("CargaAcademicaCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'codename';
     var params = {};
     $scope.lista = [];
     $scope.cargaacademica= {};
@@ -57,6 +57,21 @@ app
 .controller("CargaAcademicaSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.cargaacademica = {};
+    $scope.salon = [];
+    $scope.curso = [];
+
+
+    $scope.getData = function(){
+        registroService.Salon.query(function(r){
+            $scope.salones = r;
+        });
+
+        registroService.Curso.query(function(r){
+            $scope.cursos = r;
+        });
+    };
+
+
 
     $scope.sel = function() {
         registroService.CargaAcademica.get({ id: $stateParams.id }, function(r) {
@@ -75,7 +90,7 @@ app
             registroService.CargaAcademica.update({ id: $scope.cargaademica.id }, $scope.cargaacademica, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se editó el cargaAcademica ' + r.salon, 'CargaAcademica');
-                $state.go('registro.registro.cargaAcademica');
+                $state.go('registro.registro.cargaacademica');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -84,7 +99,7 @@ app
             registroService.CargaAcademica.save($scope.cargoescolar, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se insertó el cargaAcademica ' + r.salon, 'CargaAcademicar');
-                $state.go('registro.registro.cargaAcademica');
+                $state.go('registro.registro.cargaacademica');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -93,6 +108,6 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('registro.registro.cargaacademica');
+        $state.go('registro.registro.cargaacademicas');
     };
 });

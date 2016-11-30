@@ -1,14 +1,14 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <md-card ng-controller="CargoEscolarCtrl">
+            <md-card ng-controller="CargaAcademicaCtrl">
                 <md-card-header>
                     <md-card-avatar>
                         <img class="md-user-avatar" src="media/img/list/cargo.jpg" />
                     </md-card-avatar>
                     <md-card-header-text>
                         <span class="md-headline">Carga Academica</span>
-                        <span class="md-subhead">Cargas Academicas</span>
+                        <span class="md-subhead">Lista de cargaAcademicas</span>
                     </md-card-header-text>
                 </md-card-header> 
                 <md-divider></md-divider>
@@ -47,8 +47,8 @@
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ $index + 1 }} </td>
-                                <td> {{ d.salon_nombre }} </td>
-                                <td> {{ d.curso_nombre}} </td>
+                                <td> {{ d.salon }} </td>
+                                <td> {{ d.curso}} </td>
                                 <td> {{ d.estado}} </td>
                                 
                                 
