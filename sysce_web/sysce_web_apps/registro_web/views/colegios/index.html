@@ -8,13 +8,13 @@
                     </md-card-avatar>
                     <md-card-header-text>
                         <span class="md-headline">Colegios</span>
-                        <span class="md-subhead">Trabajar con Colegios</span>
+                        <span class="md-subhead">Lista de Colegios</span>
                     </md-card-header-text>
                 </md-card-header>
                 <md-divider></md-divider>
                 <md-card-actions layout="row" layout-align="start center">
                             <md-button class="md-icon-button" aria-label="Add" ui-sref="registro.registro.colegiosNew">
-                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <md-tooltip md-autohide>Insertar</md-tooltip>
                                 <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
                             </md-button>
                             <md-card-icon-actions>
@@ -34,14 +34,14 @@
                         <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
                         <thead md-on-reorder="onReorder">
                             <tr>
-                                <th>#</th>
-                                <th class="col-hidden" data-order="nombre">nombre</th>
-                                <th class="col-hidden" data-order="direccion">direccion</th>
+                                <th>ID</th>
+                                <th class="col-hidden" data-order="nombre">Nombre</th>
+                                <th class="col-hidden" data-order="direccion">Direccion</th>
                                 <th class="col-hidden" data-order="departamento">Departamento</th>
-                                <th class="col-hidden" data-order="provincia">provincia</th>
-                                <th class="col-hidden" data-order="distrito">distrito</th>
-                                <th class="col-hidden" data-order="telefono">telefono</th>
-                                <th class="col-hidden" data-order="descripcion">descripcion</th>
+                                <th class="col-hidden" data-order="provincia">Provincia</th>
+                                <th class="col-hidden" data-order="distrito">Distrito</th>
+                                <th class="col-hidden" data-order="telefono">Telefono</th>
+                                <th class="col-hidden" data-order="descripcion">Descripcion</th>
 
                                 <th colspan="2" class="align-options">Modificar</th>
                             </tr>

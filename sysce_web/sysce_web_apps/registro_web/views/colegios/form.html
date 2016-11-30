@@ -23,36 +23,54 @@
                                 </div>
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Direcion</label>
+                                <label>Direccion</label>
                                 <input name="direccion" ng-model="colegio.direccion" required>
-                             
+                                <div ng-messages="dForm.direccion.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Departamento</label>
+                                <input name="departamento" ng-model="colegio.departamento" required>
+                                <div ng-messages="dForm.departamento.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            </div>
+                            <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Provincia</label>
+                                <input name="provincia" ng-model="colegio.provincia" required>
+                                <div ng-messages="dForm.provincia.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Distrito</label>
+                                <input name="distrito" ng-model="colegio.distrito" required>
+                                <div ng-messages="dForm.distrito.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Telefono</label>
+                                <input name="telefono" ng-model="colegio.telefono" required>
+                                <div ng-messages="dForm.telefono.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
                             </md-input-container>
                         </div>
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="colegio.departamento" aria-label="departamento">
-                                Departamento
-                            </md-checkbox>
-                        </md-input-container>
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="colegio.provincia" aria-label="provincia">
-                                Provincia
-                            </md-checkbox>
-                        </md-input-container>
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="colegio.distrito" aria-label="distrito">
-                                Distrito
-                            </md-checkbox>
-                        </md-input-container>
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="colegio.telefono" aria-label="telefono">
-                                Telefono 
-                            </md-checkbox>
-                        </md-input-container>
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="colegio.descripcion" aria-label="descripcion">
-                                Descripcion
-                            </md-checkbox>
-                        </md-input-container>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Descripción</label>
+                                <input name="descripcion" ng-model="colegio.descripcion" required>
+                                <div ng-messages="dForm.descripcion.$error">
+                                <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            
+                            
+                            
                     </md-card-content>
                     <md-divider></md-divider>
                     <md-card-actions layout="row" layout-xs="column" layout-align="start center">

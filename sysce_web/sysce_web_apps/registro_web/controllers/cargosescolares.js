@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("CargoEscolarCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'name,codename';
+    $scope.fields = 'codename';
     var params = {};
     $scope.lista = [];
     $scope.cargoescolar= {};
@@ -60,7 +60,7 @@ app
 
     $scope.sel = function() {
         registroService.CargoEscolar.get({ id: $stateParams.id }, function(r) {
-            $scope.CargoEscolar = r;
+            $scope.cargoescolar = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -83,7 +83,7 @@ app
         } else {
             registroService.CargoEscolar.save($scope.cargoescolar, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó el cargoescolar ' + r.nombre, 'CargoEscolar');
+                toastr.success('Se insertó ' + r.nombre, 'CargoEscolar');
                 $state.go('registro.registro.cargoescolar');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
@@ -93,6 +93,6 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('registro.registro.cargoescolar');
+        $state.go('registro.registro.cargoescolares');
     };
 });
