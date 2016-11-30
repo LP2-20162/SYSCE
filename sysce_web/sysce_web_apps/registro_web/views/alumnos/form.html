@@ -1,39 +1,56 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
         <div flex-xs flex-gt-xs="100" layout="column">
-            <form name="dForm" role="form" ng-controller="PersonaSaveCtrl">
+            <form name="dForm" role="form" ng-controller="AlumnoSaveCtrl">
                 <md-card>
                     <md-card-header>
                         <md-card-avatar>
-                            <img class="md-user-avatar" src="media/img/list/alumnos.png" />
+                            <img class="md-user-avatar" src="media/img/list/60.jpeg" />
                         </md-card-avatar>
                         <md-card-header-text>
+                           
                             <span class="md-headline">Alumno</span>
-                            <span class="md-subhead">Registro de alumnos sysce</span>
+                            <span class="md-subhead">Instar Alumno</span>
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
+                            
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Nombre</label>
-                                <input name="nombre" ng-model="persona" required>
-                                <div ng-messages="dForm.nombre.$error">
-                                    <div ng-message="required">This is required.</div>
-                                </div>
-                            </md-input-container>
-                              <md-input-container class="md-block" flex-gt-sm>
-                                <label>CargoEscolar</label>
-                                <input name="cargoEscolar" ng-model="cargoEscolar" required>
-                                <div ng-messages="dForm.nombre.$error">
-                                    <div ng-message="required">This is required.</div>
-                                </div>
+                                <label>Alumno</label>
+                                 <md-autocomplete
+                                      md-search-text="q"
+                                      md-item-text = "item.persona"
+                                      md-selected-item-change="selectPersona(item)"
+                                      md-items="item in buscarPersona(q)"
+                                      md-min-length="1"
+                                      placeholder="persona">
+                                    <md-item-template>
+                                      <span md-highlight-text="q" md-highlight-flags="^i">{{item.persona}}</span>
+                                    </md-item-template>
+                                    <md-not-found>
+                                      No existe "{{q}}" No se registro en la Base de datos.
+                                    </md-not-found>
+                                  </md-autocomplete>
                             </md-input-container>
                             
-                        <md-input-container class="md-block">
-                            <md-checkbox ng-model="alumno.estado" aria-label="estado">
-                               Estado
-                            </md-checkbox>
-                        </md-input-container>
+                    
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Cargo.E</label>
+                                <md-select ng-model="alumno.cargoEscolar" required>
+                                    <md-option ng-repeat="c in cargoEscolar" ng-value="c.id">{{c.ncargo}}</md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Colegio</label>
+                                <md-select ng-model="alumno.colegio">
+                                    <md-option ng-repeat="a in colegio" ng-value="a.id">{{a.ncolegio}}</md-option>
+                                </md-select>
+                            </md-input-container>
+                                <md-input-container class="md-block" flex-gt-sm>
+                                <label>Estado</label>
+                                <input name="estado" ng-model="alumno.estado">
+                            </md-input-container>
                         </div>
                     </md-card-content>
                     <md-divider></md-divider>

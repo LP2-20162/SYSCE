@@ -58,9 +58,27 @@ app
     //Valores iniciales
     $scope.curso = {};
 
+      //Comienza Controller para Autocomplet
+   // $scope.getData = function(){
+     //   repositorioService.Persona.query(function(r){
+       //     $scope.persona = r;
+       // });
+    $scope.buscarDocente = function(q){
+        return registroService.Docente.query({query:q}, function(r){
+            return r;
+        });
+    };
+
+    $scope.selectDocente = function(item){
+        $scope.docente.persona.nombre= item.id;
+    };
+
+  //Aqui termina autocomplet
+
+
     $scope.sel = function() {
         registroService.Curso.get({ id: $stateParams.id }, function(r) {
-            $scope.Curso = r;
+            $scope.curso = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);

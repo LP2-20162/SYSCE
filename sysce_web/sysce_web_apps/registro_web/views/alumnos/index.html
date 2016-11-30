@@ -39,8 +39,9 @@
                         <thead md-on-reorder="onReorder">
                             <tr>
                                 <th>Id</th>
-                                <th class="col-hidden" data-order="persona.nombre">Nombre</th>
-                                <th colspan="2" class="align-options" data-order="cargoEscolar">Cargo Escolar</th>
+                                <th class="col-hidden" data-order="persona">Nombre</th>                               
+                                <th class="col-hidden" data-order="cargoescolar">Cargo.E</th>
+                                <th class="col-hidden" data-order="colegio">Colegio</th>
                                 <th class="col-hidden" data-order="estado">Estado</th>                        
                      
                             </tr>
@@ -48,8 +49,11 @@
                         <tbody>
                             <tr ng-repeat="d in lista">
                                 <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
-                                <td> {{ d.persona }} </td>                                
-                                <td> {{ d.cargoEscolar }} </td>
+
+                                <td> {{ d.npersona }} </td>                                
+                                <td> {{ d.ncargo}} </td>
+                                <td> {{ d.ncolegio}} </td>
+                                
                                 <td> {{ d.estado }} </td>
                              
                                 <td>

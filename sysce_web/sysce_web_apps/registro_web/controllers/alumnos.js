@@ -4,7 +4,7 @@ app
 // =========================================================================
     .controller("AlumnoCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'codename';
     var params = {};
     $scope.lista = [];
     $scope.alumno = {};
@@ -54,6 +54,36 @@ app
 .controller("AlumnoSaveCtrl", function($scope, $state, $stateParams, registroService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.alumno = {};
+    $scope.cargoescolar = [] ;    
+    $scope.cargaacademica = [];
+    $scope.colegio = [];
+
+    $scope.getData = function(){
+        registroService.CargoEscolar.query(function(r){
+            $scope.cargoescolar = r;
+        });
+
+        registroService.CargaAcademica.query(function(r){
+            $scope.cargaacademica = r;
+        });
+
+        registroService.Colegio.query(function(r){
+            $scope.colegio = r;
+        });
+    };
+
+    $scope.getData();
+
+    $scope.buscarPersona = function(q){
+        return registroService.Persona.query({query:q}, function(r){
+            return r;
+        });
+    };
+
+    $scope.selectPersona= function(item){
+        $scope.alumno.persona = item.id;
+    };
+
 
     $scope.sel = function() {
         registroService.Alumno.get({ id: $stateParams.id }, function(r) {

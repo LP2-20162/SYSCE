@@ -22,11 +22,25 @@
                                 <div ng-message="required">Este campo es requerido.</div>
                                 </div>
                             </md-input-container>
-
                             <md-input-container class="md-block" flex-gt-sm>
-                                <label>Docente</label>
-                                <input name="docente" ng-model="curso.docente" required>
-                             
+
+                                    <label>Docente</label>
+
+                                    <md-autocomplete
+                                        md-search-text="q"
+                                        md-item-text="item.nombre"
+                                        md-selected-item-change="selectDocente(item)"
+                                        md-items="item in buscarDocente(q)" 
+                                        md-min-length="1"
+                                        placeholder="Busque persona">
+                <md-item-template><span md-highlight-text="q" md-highlight-flags="^i">{{item.nombre}} </span>
+                                        </md-item-template>
+                                        <md-not-found>
+                                         No existe el docente  : " {{q}} " 
+                                         </md-not-found>
+                                    </md-autocomplete>
+                    </md-input-container>
+
                             </md-input-container>
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>Horas</label>
