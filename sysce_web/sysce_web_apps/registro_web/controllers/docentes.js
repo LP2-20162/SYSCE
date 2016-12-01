@@ -61,13 +61,13 @@ app
        //     $scope.persona = r;
        // });
     $scope.buscarPersona = function(q){
-        return registroService.Persona.query({query:q}, function(r){
+        return registroService.Docente.query({query:q}, function(r){
             return r;
         });
     };
 
     $scope.selectPersona = function(item){
-        $scope.docente.persona.nombre= item.id;
+        $scope.docente.docente.persona= item.id;
     };
 
   //Aqui termina autocomplet

@@ -72,6 +72,7 @@ app
         });
     };
 
+
     $scope.getData();
 
     $scope.buscarPersona = function(q){
@@ -83,6 +84,9 @@ app
     $scope.selectPersona= function(item){
         $scope.alumno.persona = item.id;
     };
+
+
+
 
 
     $scope.sel = function() {
