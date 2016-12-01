@@ -12,8 +12,7 @@ app
     $scope.list = function(params) {
         $scope.isLoading = true;
         registroService.Colegio.query(params, function(r) {
-            $scope.lista = r.results;
-            $scope.options = r.options;
+            $scope.lista = r;
             $scope.isLoading = false;
         }, function(err) {
             $log.log("Error in list:" + JSON.stringify(err));
