@@ -70,7 +70,7 @@ app
     };
 
     $scope.selectDocente = function(item){
-        $scope.docente.persona.nombre= item.id;
+        $scope.docente.persona= item.id;
     };
 
   //Aqui termina autocomplet

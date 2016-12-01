@@ -15,20 +15,21 @@
                     </md-card-header>
                     <md-card-content>
                         <div layout-gt-sm="row">
+                              
+                            
+                            <md-input-container class="md-block" flex-gt-sm>
                             <label>Salon</label>
                                 <md-select ng-model="cargaacademica.salon" required>
-                                    <md-option ng-repeat="c in salones" ng-value="c.id">{{c.nivel}}</md-option>
+                                    <md-option ng-repeat="c in salones" ng-value="c.id">{{c.m_salon}}</md-option>
                                 </md-select>
                             </md-input-container>
-                        </div>
-                        <div layout-gt-sm="row">
+
+                            <md-input-container class="md-block" flex-gt-sm>
                             <label>Curso</label>
                                 <md-select ng-model="cargaacademica.curso" required>
-                                    <md-option ng-repeat="c in cursos" ng-value="c.id">{{c.curso}}</md-option>
+                                    <md-option ng-repeat="c in cursos" ng-value="c.id">{{c.m_curso}}</md-option>
                                 </md-select>
                             </md-input-container>
-                            </div>
-                        <div layout-gt-sm="row">
                               <md-input-container class="md-block">
                             <md-checkbox ng-model="cargaacademica.estado" aria-label="estado">
                                Estado

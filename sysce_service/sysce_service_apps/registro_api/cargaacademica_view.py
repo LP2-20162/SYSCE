@@ -8,8 +8,8 @@ from sysce_service_apps.registro.models.cargaAcademica import CargaAcademica
 
 class CargaAcademicaSerializer(serializers.ModelSerializer):
 
-    salon = serializers.ReadOnlyField(source='salon.nivel')
-    curso = serializers.ReadOnlyField(source='curso.curso')
+    m_salon = serializers.ReadOnlyField(source='salon.nivel')
+    m_curso = serializers.ReadOnlyField(source='curso.curso')
 
     class Meta:
         model = CargaAcademica

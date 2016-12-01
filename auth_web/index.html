@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css" />
     <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="static/styles/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="static/styles/estilos.css" type="text/css" />
 
-    <link rel="stylesheet" href="static/styles/app.css" type="text/css" />
     
 
 </head>
@@ -23,57 +25,106 @@
 
 <!-- div(ng-app="MyApp", ng-controller="AppCtrl", layout="column", layout-align="center center", layout-fill)-->
 </body>
-<body background="media/img/list/sysce.png">  
-   <nav class="navbar navbar-default navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Crear una Cuenta</a>
-    </div>
+<!--<body background="media/img/list/sysce.png">  -->          
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Sysce Informacion</a></li>
-        <li><a href="#">Contactos</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Colegios<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Americana</a></li>
-            <li><a href="#">Buen Pastor</a></li>
-            <li><a href="#">San Roman</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Kalbertmatter</a></li>
-            <li class="divider"></li>
-            <li><a href="#">CATA</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Buscar">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+                    <span class="sr-only">Desplegar /Ocultar menu</span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                  </button>
+                  <a href="" class="navbar-brand">Grupo Sysce</a>
+                </div>
+                <!--Inicia Menu -->
+                <div class="collapse navbar-collapse" id="navegacion-fm">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Inicio</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        Categorias <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Categoria #1</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Categoria #2</a></li>
+                        <li><a href="#">Categoria #3</a></li>
+                        <li><a href="#">Categoria #4</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Contacto</a></li>
+
+                    <li><a href="w.html">Login</a></li>
+                  </ul>
+                  <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                  <button type="submit" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+  </header>
+
+         <!-- aqui va el jumbotron-->
+      <section class="jumbotron">
+        <div class="container">
+          <h1><strong>Grupo Sysce </strong></h1>
+          <p>Sistema de control de asistencia</p>
+          <p>Pagina principal</p>
         </div>
-        <button type="submit" class="btn btn-default">Buscar</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text">Ya tienes una Cuenta?</p></li>
-        <li class="dropdown">
-          <a href="w.html" class="dropdown-toggle" data-toggle="dropdown"><b>Entrar</b> </a>
-            
-        </li>
-      </ul>    
-    </div><!-- /.navbar-collapse -->
-  </div> <!-- /.container-fluid -->
-</nav>
+      </section>
 
-    
-    
+      <section class="main container">
+        <div class="row">
+          <section class="posts col-md-9">
+            <div class="migas-de-pan">
+              <ol class="breadcrumb">
+                <li><a href="#">Inicio</a></li>
+               
+          </section>
+
+      <aside class="col-md-3 hidden-xs hidden-sm">
+              <h4>Colegios</h4>
+                  <div class="list-group">
+                 <a href="#" class="list-group-item active">Pedro Kalbertmatter</a>
+                 <a href="#" class="list-group-item ">La salle</a>
+                 <a href="#" class="list-group-item ">Salazar Bondy</a>
+                 <a href="#" class="list-group-item ">Colegio Galeno</a>
+                 <a href="#" class="list-group-item ">Creacion de Sysce</a>
+                 <a href="#" class="list-group-item ">Redes Sociales</a>
+                 <a href="#" class="list-group-item ">Contactos</a>
+                 <a href="#" class="list-group-item ">Ultimas noticias</a>
+                  </div>
+
+          </aside>
+           </div>
+      </section>
+
+       <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <p>Jose Pantigoso - La web</p>
+            </div>
+            <div class="col-xs-6">
+              <ul class="list-inline text-right">
+                <li><a href="#">Incio</a></li>
+                <li><a href="#">Curso</a></li>
+                <li><a href="#">Contacta</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+ <script src="static/styles/jquery.js"></script>
+ <script src="static/styles/bootstrap.min.js"></script>
+
 </body>
-
 </html>

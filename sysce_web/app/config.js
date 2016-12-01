@@ -313,16 +313,16 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cargaacademica/index.html"
     },
-    "registro.registro.cargaacademicaNew": {
-        "url": "/cargaacademica/new",
+    "registro.registro.cargaacademicasNew": {
+        "url": "/cargaacademicas/new",
         "data": {
             "section": "Registro",
             "page": "CargaAcademica"
         },
         "templateUrl": "sysce_web_apps/registro_web/views/cargaacademica/form.html"
     },
-    "registro.registro.cargaacademicaEdit": {
-        "url": "/cargaacademica/:id/edit",
+    "registro.registro.cargaacademicasEdit": {
+        "url": "/cargaacademicas/:id/edit",
         "data": {
             "section": "Registro",
             "page": "CargaAcademica"

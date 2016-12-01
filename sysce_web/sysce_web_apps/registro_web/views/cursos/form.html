@@ -28,12 +28,12 @@
 
                                     <md-autocomplete
                                         md-search-text="q"
-                                        md-item-text="item.nombre"
+                                        md-item-text="item.persona"
                                         md-selected-item-change="selectDocente(item)"
                                         md-items="item in buscarDocente(q)" 
                                         md-min-length="1"
                                         placeholder="Busque persona">
-                <md-item-template><span md-highlight-text="q" md-highlight-flags="^i">{{item.nombre}} </span>
+                <md-item-template><span md-highlight-text="q" md-highlight-flags="^i">{{item.persona}} </span>
                                         </md-item-template>
                                         <md-not-found>
                                          No existe el docente  : " {{q}} " 
